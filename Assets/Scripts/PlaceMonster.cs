@@ -4,31 +4,83 @@ using UnityEngine;
 
 public class PlaceMonster : MonoBehaviour {
 
-    public GameObject monsterPrefab;
-    private GameObject monster;
+    
+    public GameObject monsterSelector;
+    //private GameObject monster;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public Transform loseta;
+    public GameObject Snake, Horns;
 
-    private bool CanPlaceMonster()
+    private Vector3 newMonsterPosition;
+
+
+
+
+    void Update()
     {
-        return monster == null;
-    }
-
-
-    private void OnMouseUp()
-    {
-        if (CanPlaceMonster())
+        if (Input.GetMouseButtonDown(0))
         {
-            monster = Instantiate(monsterPrefab, transform.position, Quaternion.identity);
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+            if (hit.collider)
+            {
+                if (!monsterSelector.activeInHierarchy)
+                {
+                    if (hit.transform.tag == "MonsterSpot")
+                    {
+                        newMonsterPosition = hit.transform.position;
+                        loseta = hit.transform;
+
+                        if (loseta.transform.GetComponent<SpotStatus>().CanPlaceMonster())
+                        {
+                            monsterSelector.transform.position = newMonsterPosition;
+                            monsterSelector.SetActive(true);
+                        }
+                    }
+                }
+                else
+                {
+                    if (hit.transform.tag == "MonsterSpot")
+                    {
+                        newMonsterPosition = hit.transform.position;
+                        loseta = hit.transform;
+
+                        if (loseta.transform.GetComponent<SpotStatus>().CanPlaceMonster())
+                        {
+                            monsterSelector.transform.position = newMonsterPosition;
+                            monsterSelector.SetActive(true);
+                        }
+                    }
+                    else if (hit.transform.tag == "Snake")
+                    {
+                        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
+                        monsterSelector.SetActive(false);
+                        loseta = null;
+                    }
+                    else if (hit.transform.tag == "Horns")
+                    {
+                        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Horns, newMonsterPosition, Quaternion.identity);
+                        monsterSelector.SetActive(false);
+                        loseta = null;
+                    }
+
+                }
+  
+            }
+            else
+            {
+                if (monsterSelector.activeInHierarchy)
+                {
+                    monsterSelector.SetActive(false);
+                }
+            }
         }
     }
+
+
+
 
 }

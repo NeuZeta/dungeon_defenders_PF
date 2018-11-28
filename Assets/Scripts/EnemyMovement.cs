@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour {
                 lookingRight = true;
             }
 
-            Debug.Log("Mirando a la derecha");
+            //Debug.Log("Mirando a la derecha");
         }
         else
         {
@@ -45,7 +45,7 @@ public class EnemyMovement : MonoBehaviour {
 
                 lookingRight = false;
             }
-            Debug.Log("Mirando a la izquierda");
+            //Debug.Log("Mirando a la izquierda");
         }
 
         float pathLength = Vector3.Distance(startPosition, endPosition);
