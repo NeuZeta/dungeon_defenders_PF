@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpotStatus : MonoBehaviour {
 
-    public GameObject Snake, Horns;
+    
 
     [HideInInspector]
     public GameObject monster;

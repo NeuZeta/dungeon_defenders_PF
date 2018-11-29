@@ -7,14 +7,11 @@ public class PlaceMonster : MonoBehaviour {
     
     public GameObject monsterSelector;
     //private GameObject monster;
-
+    [HideInInspector]
     public Transform loseta;
     public GameObject Snake, Horns;
 
     private Vector3 newMonsterPosition;
-
-
-
 
     void Update()
     {
@@ -56,15 +53,29 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else if (hit.transform.tag == "Snake")
                     {
-                        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
-                        monsterSelector.SetActive(false);
-                        loseta = null;
+                        if (GameManager.instance.soulTears >= 200)
+                        {
+                            GameManager.instance.soulTears -= 200;
+                            GameManager.instance.UpdateTearsState();
+
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
+                            monsterSelector.SetActive(false);
+                            loseta = null;
+                        }
+                        
                     }
                     else if (hit.transform.tag == "Horns")
                     {
-                        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Horns, newMonsterPosition, Quaternion.identity);
-                        monsterSelector.SetActive(false);
-                        loseta = null;
+                        if (GameManager.instance.soulTears >= 250)
+                        {
+                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.UpdateTearsState();
+
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Horns, newMonsterPosition, Quaternion.identity);
+                            monsterSelector.SetActive(false);
+                            loseta = null;
+                        }
+                        
                     }
 
                 }

@@ -8,6 +8,7 @@ TagManager:
   - Horns
   - MonsterSpot
   - Background
+  - Enemy
   layers:
   - Default
   - TransparentFX

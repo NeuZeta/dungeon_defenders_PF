@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4013363067278792}
   - component: {fileID: 95366449999414924}
+  - component: {fileID: 114479039895755648}
   m_Layer: 0
   m_Name: Serpentine
   m_TagString: Untagged
@@ -619,6 +620,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114479039895755648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1111252985458858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5345ab06556e3345ab40d9cf9d430c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageForce: 25
+  range: 10
+  attackRate: 5
+  actualTimeBetweenAttacks: 0
 --- !u!212 &212123137199521628
 SpriteRenderer:
   m_ObjectHideFlags: 1
