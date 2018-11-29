@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
+    [HideInInspector]
     public GameObject[] waypoints;
     public float speed = 10f;
+    public SpriteRenderer spriteRenderer;
 
     private int currentWaypoint = 0;
     private float lastWaypointResetTime;
@@ -15,20 +17,19 @@ public class EnemyMovement : MonoBehaviour {
     void Start () {
         lastWaypointResetTime = Time.time;
     }
-	
 
-	void Update () {
+
+    void Update()
+    {
 
         Vector3 startPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 endPosition = waypoints[currentWaypoint+1].transform.position;
+        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
 
-        if(startPosition.x < endPosition.x)
+        if (startPosition.x < endPosition.x)
         {
             if (!lookingRight)
             {
-                Vector3 temp = transform.localScale;
-                temp.x *= -1;
-                transform.localScale = temp;
+                spriteRenderer.flipX = true;
 
                 lookingRight = true;
             }
@@ -39,20 +40,20 @@ public class EnemyMovement : MonoBehaviour {
         {
             if (lookingRight)
             {
-                Vector3 temp = transform.localScale;
-                temp.x *= -1;
-                transform.localScale = temp;
+                spriteRenderer.flipX = false;
 
                 lookingRight = false;
             }
             //Debug.Log("Mirando a la izquierda");
         }
 
+
         float pathLength = Vector3.Distance(startPosition, endPosition);
         float totalTimeForPath = pathLength / speed;
         float currentTimeOnPath = Time.time - lastWaypointResetTime;
 
-        gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath/totalTimeForPath);
+
+        gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
 
         if (gameObject.transform.position.Equals(endPosition))
         {
@@ -68,4 +69,11 @@ public class EnemyMovement : MonoBehaviour {
         }
 
     }
+
+
+
+
+
+
+
 }

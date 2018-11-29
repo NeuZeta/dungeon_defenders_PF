@@ -13,6 +13,21 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public int gold = 1000;
 
+    public Text waveNumber;
+    public bool gameOver = false;
+    private int wave;
+    public int Wave
+    {
+        get
+        {
+            return wave;
+        }
+        set
+        {
+            wave = value;
+            waveNumber.text = "WAVE " + (wave + 1);
+        }
+    }
 
 
     // Use this for initialization
@@ -21,9 +36,14 @@ public class GameManager : MonoBehaviour {
         UpdateTearsState();
         UpdateGoldState();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        Wave = 0;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
