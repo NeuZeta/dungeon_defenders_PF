@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering;
 using UnityEngine;
 
 public class DepyhSortByY : MonoBehaviour {
@@ -15,7 +16,7 @@ public class DepyhSortByY : MonoBehaviour {
     }
 
     void Update () {
-        Renderer renderer = GetComponentInChildren<Renderer>();
+        SortingGroup renderer = GetComponent<SortingGroup>();
 
         if (target == null)
         {
@@ -23,5 +24,7 @@ public class DepyhSortByY : MonoBehaviour {
         }
 
         renderer.sortingOrder = -(int)(target.position.y * IsometricRangePerYUnit);
+       
+        
 	}
 }

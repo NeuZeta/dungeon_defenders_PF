@@ -138,11 +138,12 @@ GameObject:
   - component: {fileID: 4668987547501280}
   - component: {fileID: 50708036606512528}
   - component: {fileID: 70258726404320742}
+  - component: {fileID: 210182660485451244}
   - component: {fileID: 114611262774548340}
   - component: {fileID: 114171056003737022}
   - component: {fileID: 114649399283917580}
   m_Layer: 0
-  m_Name: Enemy_BASIC
+  m_Name: Enemy_Basic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,6 +459,16 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!210 &210182660485451244
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1904700802149452}
+  m_Enabled: 1
+  m_SortingLayerID: 1661978671
+  m_SortingLayer: 2
+  m_SortingOrder: 0
 --- !u!212 &212056633899528484
 SpriteRenderer:
   m_ObjectHideFlags: 1

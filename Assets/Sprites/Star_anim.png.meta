@@ -1,18 +1,13 @@
 fileFormatVersion: 2
-guid: 2904c13e8de350d47bc61f83a46a596a
+guid: 8b28261006f42aa40bebf105c7120f78
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Body
-    21300002: left
-    21300004: right
-    21300006: eye
-    21300008: Body
-    21300010: left
-    21300012: right
-    21300014: Eye
-    21300016: shadow
-    21300018: Body_2
-    21300020: Head
+    21300000: Star_head_1
+    21300002: Star_head_2
+    21300004: Star_body
+    21300006: Star_arm_up
+    21300008: Star_arm_down
+    21300010: Shadow
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -117,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Body
+      name: Star_head_1
       rect:
         serializedVersion: 2
-        x: 355
-        y: 439
-        width: 205
-        height: 557
+        x: 79
+        y: 425
+        width: 474
+        height: 473
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,59 +126,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da769909d39a7b94e8f0b5fc17a93054
+      spriteID: 520b93e663858004a92ad928670d09e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: left
+      name: Star_head_2
       rect:
         serializedVersion: 2
-        x: 722
-        y: 349
-        width: 82
-        height: 24
-      alignment: 9
-      pivot: {x: 1, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f44001ec18679f54e87d9e517d4daff2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: right
-      rect:
-        serializedVersion: 2
-        x: 831
-        y: 351
-        width: 84
-        height: 22
-      alignment: 9
-      pivot: {x: 0, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8864368bd44e3bd47a0279c9f5914915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eye
-      rect:
-        serializedVersion: 2
-        x: 695
-        y: 217
-        width: 52
-        height: 55
+        x: 641
+        y: 496
+        width: 272
+        height: 275
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,67 +146,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e295807e3497594c80ef407654abd20
+      spriteID: 79b26b3f153c8e3449183b9b50857b46
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: shadow
+      name: Star_body
       rect:
         serializedVersion: 2
-        x: 82
-        y: 57
-        width: 294
-        height: 143
+        x: 56
+        y: 25
+        width: 184
+        height: 287
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 2, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bea5ec2d67714e4b9b14a14f413d3ea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Body_2
-      rect:
-        serializedVersion: 2
-        x: 579
-        y: 440
-        width: 422
-        height: 556
-      alignment: 0
-      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd5ac7af41a0b4c4e83fe2367cd76250
+      spriteID: a96bcf06f67ff55488b24c56ed885546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Head
+      name: Star_arm_up
       rect:
         serializedVersion: 2
-        x: 41
-        y: 755
-        width: 281
-        height: 213
+        x: 729
+        y: 305
+        width: 216
+        height: 95
       alignment: 9
-      pivot: {x: 0.5, y: 0}
+      pivot: {x: 0.05486043, y: 0.2048025}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 541156e05babbd7469d1ede526dd1ea1
+      spriteID: 3da71007a74d3cd4c979dad458dbe827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Star_arm_down
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 197
+        width: 170
+        height: 83
+      alignment: 9
+      pivot: {x: 0.0443862, y: 0.6930737}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d074d5c07c0823c4db6b8b705f252d3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadow
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 24
+        width: 288
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c9b9b3f6b3ebb84bbfe27cfd1f328a6
       vertices: []
       indices: 
       edges: []
@@ -259,7 +234,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9d93cda3dce5a3843939d2f106745eeb
+    spriteID: 10499a142f3efc9409653d497c56ac12
     vertices: []
     indices: 
     edges: []

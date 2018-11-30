@@ -5,6 +5,9 @@ TextureImporter:
     21300000: Body
     21300002: arm
     21300004: Shadow
+    21300006: Cuernitos_head_1
+    21300008: Cuernitos_head_2
+    21300010: Cuernitos_wing
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -112,12 +115,12 @@ TextureImporter:
       name: Body
       rect:
         serializedVersion: 2
-        x: 232
-        y: 63
-        width: 440
-        height: 930
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 94
+        y: 0
+        width: 250
+        height: 443
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -132,8 +135,8 @@ TextureImporter:
       name: arm
       rect:
         serializedVersion: 2
-        x: 737
-        y: 392
+        x: 750
+        y: 326
         width: 152
         height: 59
       alignment: 9
@@ -152,18 +155,78 @@ TextureImporter:
       name: Shadow
       rect:
         serializedVersion: 2
-        x: 714
-        y: 81
+        x: 723
+        y: 11
         width: 287
         height: 138
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 1e2791ccb47f4d94db8d2f49daf7225e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_head_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 489
+        width: 413
+        height: 522
+      alignment: 9
+      pivot: {x: 0.6027472, y: 0.012246084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b239c49d2343f49b96b4f49740ff1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_head_2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 428
+        width: 439
+        height: 588
+      alignment: 9
+      pivot: {x: 0.6419725, y: 0.003847239}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c366936435e1ed1489f69cab9c6b1a9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_wing
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 177
+        width: 311
+        height: 180
+      alignment: 9
+      pivot: {x: 0.013912483, y: 0.1390113}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ee02ae29de4944ba3040004ee5c8bc
       vertices: []
       indices: 
       edges: []
