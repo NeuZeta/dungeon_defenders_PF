@@ -5,14 +5,24 @@ using UnityEngine;
 public class MonsterData : MonoBehaviour {
 
     public List<MonsterType> types;
+    public Vector3 monsterPosition;
+
+    public int monsterIndex;
 
     [System.Serializable]
     public class MonsterType
     {
-        public int cost;
-        //public int sellPrice;
-        public GameObject visualization;
-        //public int damage;
+        public GameObject monsterType;
     }
+
+    public void CreateFamily (int index, Vector3 pos)
+    {
+        monsterIndex = index;
+
+        types[monsterIndex].monsterType.GetComponent<MonsterLevel>().ActivateMonster(pos);
+
+        Debug.Log("He creado un monstruo de nivel " + monsterIndex);
+    }
+
 
 }

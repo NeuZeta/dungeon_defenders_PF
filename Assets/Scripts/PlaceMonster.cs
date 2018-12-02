@@ -9,7 +9,7 @@ public class PlaceMonster : MonoBehaviour {
     //private GameObject monster;
     [HideInInspector]
     public Transform loseta;
-    public GameObject Snake, Horns;
+    public GameObject monsterHolder;
 
     private Vector3 newMonsterPosition;
 
@@ -51,19 +51,19 @@ public class PlaceMonster : MonoBehaviour {
                             monsterSelector.SetActive(true);
                         }
                     }
-                    else if (hit.transform.tag == "Snake")
-                    {
-                        if (GameManager.instance.soulTears >= 200)
-                        {
-                            GameManager.instance.soulTears -= 200;
-                            GameManager.instance.UpdateTearsState();
+                    //else if (hit.transform.tag == "Snake")
+                    //{
+                    //    if (GameManager.instance.soulTears >= 200)
+                    //    {
+                    //        GameManager.instance.soulTears -= 200;
+                    //        GameManager.instance.UpdateTearsState();
 
-                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
-                            monsterSelector.SetActive(false);
-                            loseta = null;
-                        }
+                    //        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
+                    //        monsterSelector.SetActive(false);
+                    //        loseta = null;
+                    //    }
                         
-                    }
+                    //}
                     else if (hit.transform.tag == "Horns")
                     {
                         if (GameManager.instance.soulTears >= 250)
@@ -71,7 +71,9 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= 250;
                             GameManager.instance.UpdateTearsState();
 
-                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Horns, newMonsterPosition, Quaternion.identity);
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(0, newMonsterPosition);
+
                             monsterSelector.SetActive(false);
                             loseta = null;
                         }
