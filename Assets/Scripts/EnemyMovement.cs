@@ -4,24 +4,21 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-    [HideInInspector]
+    //[HideInInspector]
     public GameObject[] waypoints;
-    public float speed = 10f;
+
+    public float speed = 1f;
     public SpriteRenderer spriteRenderer;
 
-    private int currentWaypoint = 0;
-    private float lastWaypointResetTime;
+    public int currentWaypoint = 0;
     private bool lookingRight;
 
     // Use this for initialization
-    void Start () {
-        lastWaypointResetTime = Time.time;
-    }
+    void Start () {}
 
 
     void Update()
     {
-
         Vector3 startPosition = waypoints[currentWaypoint].transform.position;
         Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
 
@@ -47,26 +44,38 @@ public class EnemyMovement : MonoBehaviour {
             //Debug.Log("Mirando a la izquierda");
         }
 
-
-        float pathLength = Vector3.Distance(startPosition, endPosition);
-        float totalTimeForPath = pathLength / speed;
-        float currentTimeOnPath = Time.time - lastWaypointResetTime;
-
-
-        gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
-
         if (gameObject.transform.position.Equals(endPosition))
         {
             if (currentWaypoint < waypoints.Length - 2)
             {
                 currentWaypoint++;
-                lastWaypointResetTime = Time.time;
-            }
-            else
-            {
-
             }
         }
+
+        transform.position = Vector3.MoveTowards(transform.position, endPosition, Time.deltaTime * speed);
+
+
+
+        //float pathLength = Vector3.Distance(startPosition, endPosition);
+        //float totalTimeForPath = pathLength / speed;
+        //float currentTimeOnPath = Time.time - lastWaypointResetTime;
+
+
+        //gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
+
+        //if (gameObject.transform.position.Equals(endPosition))
+        //{
+        //    if (currentWaypoint < waypoints.Length - 2)
+        //    {
+        //        currentWaypoint++;
+        //        lastWaypointResetTime = Time.time;
+        //    }
+        //    else
+        //    {
+
+        //    }
+        //}
+
 
     }
 

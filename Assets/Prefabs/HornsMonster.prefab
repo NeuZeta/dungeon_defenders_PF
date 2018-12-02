@@ -245,7 +245,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384899406562314}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0571609, y: -0.004, z: 0}
+  m_LocalPosition: {x: -4.49, y: -2.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4755173697691310}
@@ -397,6 +397,8 @@ MonoBehaviour:
   damageForce: 25
   range: 2
   attackRate: 2
+  slowIndex: 1
+  slowTime: 1
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1417072329878668}
   enemiesInRange: []

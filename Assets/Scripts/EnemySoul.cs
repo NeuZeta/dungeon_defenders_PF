@@ -10,6 +10,10 @@ public class EnemySoul : MonoBehaviour {
     public int actualSoul;
     public Animator anim;
     public Slider healthBar;
+    public EnemyMovement enemyMovement;
+
+    private bool scared = false;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -24,12 +28,21 @@ public class EnemySoul : MonoBehaviour {
 
 	}
 
-    public void TakeDamage(int damageForce)
+    public void TakeDamage(int damageForce, float slowIndex, float slowTime)
     {
         anim.SetTrigger("Scared");
         actualSoul -= damageForce;
+  
+        if (!scared)
+        {
+            scared = true;
+            enemyMovement.speed /= slowIndex;
+            StartCoroutine(RestoreEnemySpeed(slowTime, slowIndex));
+        }
+
         GameManager.instance.soulTears += damageForce;
         GameManager.instance.UpdateTearsState();
+
         if (actualSoul < 0)
         {
             actualSoul = 0;
@@ -43,7 +56,12 @@ public class EnemySoul : MonoBehaviour {
         healthBar.value = actualSoul;
     }
 
-    
+    IEnumerator RestoreEnemySpeed (float slowTime, float slowIndex)
+    {
+        yield return new WaitForSeconds(slowTime);
+        enemyMovement.speed *= slowIndex;
+        scared = false;
+    }
 
 }//EnemySoul
 

@@ -7,6 +7,8 @@ public class MonsterBehaviour : MonoBehaviour {
     public int damageForce;
     public float range;
     public float attackRate;
+    public float slowIndex = 1f;
+    public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
     public GameObject attackShape;
 
@@ -33,7 +35,7 @@ public class MonsterBehaviour : MonoBehaviour {
 
                 foreach (GameObject enemy in enemiesInRange)
                 {
-                    enemy.GetComponent<EnemySoul>().TakeDamage(damageForce);
+                    enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime);
                 }
             }
 
