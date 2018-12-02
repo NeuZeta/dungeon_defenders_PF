@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 114044059919950636}
   - component: {fileID: 114245849912907654}
   m_Layer: 0
-  m_Name: SnakeMonster
+  m_Name: SnakeMonster_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,6 +534,8 @@ MonoBehaviour:
   damageForce: 10
   range: 10
   attackRate: 1
+  slowIndex: 1
+  slowTime: 1
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1794779893092202}
   enemiesInRange: []

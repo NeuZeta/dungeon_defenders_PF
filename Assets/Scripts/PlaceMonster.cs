@@ -1,17 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlaceMonster : MonoBehaviour {
 
     
-    public GameObject monsterSelector;
+    public GameObject[] monsterSelector;
+    public SpriteRenderer monsterToUpgrade;
+    public Sprite[] monsters;
+
     //private GameObject monster;
     [HideInInspector]
     public Transform loseta;
     public GameObject monsterHolder;
 
     private Vector3 newMonsterPosition;
+    private string[] menu00Buttons = new string[] { "Horns", "Snake" };
 
     void Update()
     {
@@ -24,47 +29,70 @@ public class PlaceMonster : MonoBehaviour {
 
             if (hit.collider)
             {
-                if (!monsterSelector.activeInHierarchy)
-                {
-                    if (hit.transform.tag == "MonsterSpot")
-                    {
-                        newMonsterPosition = hit.transform.position;
-                        loseta = hit.transform;
 
-                        if (loseta.transform.GetComponent<SpotStatus>().CanPlaceMonster())
+                if (hit.transform.tag == "MonsterSpot")
+                {
+                    newMonsterPosition = hit.transform.position;
+                    loseta = hit.transform;
+
+                    if (loseta.transform.GetComponent<SpotStatus>().CanPlaceMonster())
+                    {
+                        monsterSelector[0].transform.position = newMonsterPosition;
+
+                        for (int i = 0; i < monsterSelector.Length; i++)
                         {
-                            monsterSelector.transform.position = newMonsterPosition;
-                            monsterSelector.SetActive(true);
+                            if (i == 0)
+                            {
+                                monsterSelector[i].SetActive(true);
+                            }
+                            else
+                            {
+                                monsterSelector[i].SetActive(false);
+                            }
                         }
+                    }
+                    else
+                    {
+                        //Debug.Log("ya hay un monstruo");
+                        int activeMonsterType = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().monsterIndex;
+                        int currentMonsterLevel = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().GetMonsterLevel();
+
+                        Debug.Log("active Monster Type = " + activeMonsterType);
+                        Debug.Log("Current Monster Level = " + currentMonsterLevel);
+
+                        if (activeMonsterType == 0 && currentMonsterLevel == 0)
+                        {
+                            Debug.Log("Deberia mostrar un menu");
+                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
+                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
+                            monsterToUpgrade.sprite = monsters[currentMonsterLevel];
+
+                        }
+                        if (activeMonsterType == 0 && currentMonsterLevel == 1)
+                        {
+                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
+                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
+                            monsterToUpgrade.enabled = false;
+                        }
+                        if (activeMonsterType == 1 && currentMonsterLevel == 0)
+                        {
+                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
+                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
+                            monsterToUpgrade.sprite = monsters[currentMonsterLevel];
+                        }
+                        if (activeMonsterType == 1 && currentMonsterLevel == 1)
+                        {
+                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
+                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
+                            monsterToUpgrade.enabled = false;
+                        }
+
+
                     }
                 }
-                else
+                else if (hit.transform.tag == "Menu00")
                 {
-                    if (hit.transform.tag == "MonsterSpot")
-                    {
-                        newMonsterPosition = hit.transform.position;
-                        loseta = hit.transform;
-
-                        if (loseta.transform.GetComponent<SpotStatus>().CanPlaceMonster())
-                        {
-                            monsterSelector.transform.position = newMonsterPosition;
-                            monsterSelector.SetActive(true);
-                        }
-                    }
-                    //else if (hit.transform.tag == "Snake")
-                    //{
-                    //    if (GameManager.instance.soulTears >= 200)
-                    //    {
-                    //        GameManager.instance.soulTears -= 200;
-                    //        GameManager.instance.UpdateTearsState();
-
-                    //        loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(Snake, newMonsterPosition, Quaternion.identity);
-                    //        monsterSelector.SetActive(false);
-                    //        loseta = null;
-                    //    }
-                        
-                    //}
-                    else if (hit.transform.tag == "Horns")
+                    if (hit.transform.name == "Horns")
                     {
                         if (GameManager.instance.soulTears >= 250)
                         {
@@ -72,28 +100,46 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.UpdateTearsState();
 
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
-                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(0, newMonsterPosition);
-
-                            monsterSelector.SetActive(false);
-                            loseta = null;
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(System.Array.IndexOf(menu00Buttons, "Horns"), newMonsterPosition);
                         }
-                        
+                    }
+                    else if (hit.transform.name == "Snake")
+                    {
+                        if (GameManager.instance.soulTears >= 250)
+                        {
+                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.UpdateTearsState();
+
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(System.Array.IndexOf(menu00Buttons, "Snake"), newMonsterPosition);
+                        }
                     }
 
+                    foreach (GameObject menu in monsterSelector)
+                    {
+                        menu.SetActive(false);
+                    }
+                    loseta = null;
                 }
-  
+                else if (hit.transform.tag == "Menu01") { }
+                else if (hit.transform.tag == "Menu02") { }
             }
             else
             {
-                if (monsterSelector.activeInHierarchy)
+                foreach (GameObject menu in monsterSelector)
                 {
-                    monsterSelector.SetActive(false);
+                    menu.SetActive(false);
                 }
+                //if (monsterSelector.activeInHierarchy)
+                //{
+                //    monsterSelector.SetActive(false);
+                //}
             }
         }
     }
+}//PlaceMonsters
 
 
 
 
-}
+

@@ -4,11 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Snake
-  - Horns
   - MonsterSpot
   - Background
   - Enemy
+  - Menu00
+  - Menu01
+  - Menu02
   layers:
   - Default
   - TransparentFX

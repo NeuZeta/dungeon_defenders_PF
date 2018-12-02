@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4971528523208904}
   - component: {fileID: 212396979770689844}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cuernitos_wing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 210320994425325782}
   - component: {fileID: 114930902084374534}
   - component: {fileID: 114843817947557452}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HornsMonster_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4187926786060208}
   - component: {fileID: 212306044371941956}
   - component: {fileID: 95518637075657116}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Attack_shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4416495133779382}
   - component: {fileID: 212141048893360978}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4714483139906554}
   - component: {fileID: 212562158295183382}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cuernitos_head_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4939058358800684}
   - component: {fileID: 212862161916941244}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4746868907968852}
   - component: {fileID: 212221696894353396}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: arm (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4172610753468982}
   - component: {fileID: 212104577166853200}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cuernitos_wing (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4861486613791004}
   - component: {fileID: 212240413030483298}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

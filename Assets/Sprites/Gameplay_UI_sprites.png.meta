@@ -12,6 +12,10 @@ TextureImporter:
     21300014: Snake
     21300016: Horns
     21300018: Star
+    21300020: Monster_Level_01_selector
+    21300022: Upgrade_horns
+    21300024: Upgrade_snake
+    21300026: Monster_Level_02_selector
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -219,10 +223,10 @@ TextureImporter:
       name: Monster_selector
       rect:
         serializedVersion: 2
-        x: 178
-        y: 86
+        x: 180
+        y: 0
         width: 321
-        height: 341
+        height: 329
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,11 +264,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 74
-        y: 311
+        y: 218
         width: 33
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,11 +284,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 76
-        y: 229
+        y: 137
         width: 35
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -300,9 +304,29 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 78
-        y: 148
+        y: 56
         width: 42
         height: 56
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33b0a66b9d8ff445a16144c6572d51d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster_Level_01_selector
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 334
+        width: 314
+        height: 245
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,7 +334,67 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c33b0a66b9d8ff445a16144c6572d51d
+      spriteID: 154f6c624418ec24490da8eed510279a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_horns
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 447
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca71ca3b20c7e24c9fb2818cb44fa99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrade_snake
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 516
+        width: 64
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b1ecf4491c1cf4eb8c315f4d74283b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monster_Level_02_selector
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 590
+        width: 290
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f6419e5ffa26a44b94e34ce8a92e30
       vertices: []
       indices: 
       edges: []

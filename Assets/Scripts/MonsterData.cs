@@ -21,8 +21,11 @@ public class MonsterData : MonoBehaviour {
 
         types[monsterIndex].monsterType.GetComponent<MonsterLevel>().ActivateMonster(pos);
 
-        Debug.Log("He creado un monstruo de nivel " + monsterIndex);
     }
 
+    public int GetMonsterLevel()
+    {
+        return types[monsterIndex].monsterType.GetComponent<MonsterLevel>().monsterLevel;
+    }
 
 }
