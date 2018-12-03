@@ -102,8 +102,8 @@ GameObject:
   - component: {fileID: 95738459869924302}
   - component: {fileID: 60609646170775426}
   - component: {fileID: 210514121539045662}
-  - component: {fileID: 114604582437436024}
   - component: {fileID: 114810821027864492}
+  - component: {fileID: 114855614188826684}
   m_Layer: 2
   m_Name: StarMonster_02
   m_TagString: Untagged
@@ -282,8 +282,8 @@ GameObject:
   - component: {fileID: 95944059233860956}
   - component: {fileID: 60843008560232896}
   - component: {fileID: 210895637309260998}
-  - component: {fileID: 114125953259861046}
   - component: {fileID: 114872541645558620}
+  - component: {fileID: 114711463467438402}
   m_Layer: 2
   m_Name: StarMonster_01
   m_TagString: Untagged
@@ -346,8 +346,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1008910900117062}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0861554, y: -0.03763681, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: -0.03, y: -0.03763681, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4461240572838858}
   m_RootOrder: 3
@@ -441,7 +441,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659462218556284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -20.453548, y: 3.2362854, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4461240572838858}
@@ -522,8 +522,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1227001357069670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0861554, y: -0.03763681, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalPosition: {x: 0, y: -0.03763681, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4007351265955524}
   m_RootOrder: 7
@@ -700,7 +700,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114125953259861046
+--- !u!114 &114711463467438402
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -708,36 +708,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1953657388554002}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5345ab06556e3345ab40d9cf9d430c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 64d378f4fea63c4478b8746ac1c3b385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageForce: 0
+  damageForce: 20
   range: 0
-  attackRate: 0
-  slowIndex: 1
-  slowTime: 1
+  attackRate: 2
+  slowIndex: 5
+  slowTime: 1.5
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1008910900117062}
   enemiesInRange: []
---- !u!114 &114604582437436024
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117403362277896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5345ab06556e3345ab40d9cf9d430c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damageForce: 0
-  range: 0
-  attackRate: 0
-  slowIndex: 1
-  slowTime: 1
-  actualTimeBetweenAttacks: 0
-  attackShape: {fileID: 1227001357069670}
-  enemiesInRange: []
+  myMonsterFamily: 2
 --- !u!114 &114736633717151892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -766,6 +748,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4748998713725522}
+--- !u!114 &114855614188826684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117403362277896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64d378f4fea63c4478b8746ac1c3b385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageForce: 40
+  range: 0
+  attackRate: 2
+  slowIndex: 3
+  slowTime: 2
+  actualTimeBetweenAttacks: 0
+  attackShape: {fileID: 1227001357069670}
+  enemiesInRange: []
+  myMonsterFamily: 0
 --- !u!114 &114872541645558620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1017,7 +1019,7 @@ SpriteRenderer:
   m_SortingLayerID: 1661978671
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 131c19baac74e5f4bbe83cfa68f08c32, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 131c19baac74e5f4bbe83cfa68f08c32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1063,7 +1065,7 @@ SpriteRenderer:
   m_SortingLayerID: 1661978671
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 131c19baac74e5f4bbe83cfa68f08c32, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 131c19baac74e5f4bbe83cfa68f08c32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

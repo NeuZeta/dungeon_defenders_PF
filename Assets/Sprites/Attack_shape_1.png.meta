@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 131c19baac74e5f4bbe83cfa68f08c32
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Attack_shape
+    21300000: Attack_shape_horns
+    21300002: Attack_shape_Head_snake
+    21300004: Attack_shape_body_snake_1
+    21300006: Attack_shape_body_snake_2
+    21300008: Attack_shape_Star
+    21300010: Attack_shape_Mass
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -107,13 +112,93 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack_shape
+      name: Attack_shape_horns
       rect:
         serializedVersion: 2
-        x: 323
-        y: 399
-        width: 376
-        height: 226
+        x: 0
+        y: 588
+        width: 510
+        height: 308
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53451aa8bd851d34f91de46d391f9b8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_shape_Head_snake
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 847
+        width: 116
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec91ac8f12d280469001565986ca73b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_shape_body_snake_1
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 728
+        width: 127
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bbf5c1941256b249b2052f34a3d4b13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_shape_body_snake_2
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 527
+        width: 213
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d43bda5835e3d499d54cbd4508b86c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_shape_Star
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 107
+        width: 510
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,7 +206,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53451aa8bd851d34f91de46d391f9b8a
+      spriteID: f8cc785a314f4c945b41ff02d7fdb758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_shape_Mass
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 95
+        width: 510
+        height: 309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd4bb81b282f4d41bb4f7e995a9736a
       vertices: []
       indices: 
       edges: []

@@ -54,33 +54,23 @@ public class EnemyMovement : MonoBehaviour {
 
         transform.position = Vector3.MoveTowards(transform.position, endPosition, Time.deltaTime * speed);
 
-
-
-        //float pathLength = Vector3.Distance(startPosition, endPosition);
-        //float totalTimeForPath = pathLength / speed;
-        //float currentTimeOnPath = Time.time - lastWaypointResetTime;
-
-
-        //gameObject.transform.position = Vector2.Lerp(startPosition, endPosition, currentTimeOnPath / totalTimeForPath);
-
-        //if (gameObject.transform.position.Equals(endPosition))
-        //{
-        //    if (currentWaypoint < waypoints.Length - 2)
-        //    {
-        //        currentWaypoint++;
-        //        lastWaypointResetTime = Time.time;
-        //    }
-        //    else
-        //    {
-
-        //    }
-        //}
-
-
     }
 
 
+    public float DistanceToTreasure()
+    {
+        float distance = 0;
 
+        distance += Vector2.Distance(gameObject.transform.position, waypoints[currentWaypoint + 1].transform.position);
+        for (int i = currentWaypoint+1; i < waypoints.Length; i++)
+        {
+            Vector3 startPosition = waypoints[i].transform.position;
+            Vector3 endPosition = waypoints[i + 1].transform.position;
+            distance += Vector2.Distance(startPosition, endPosition); 
+        }
+
+        return distance;
+    }
 
 
 

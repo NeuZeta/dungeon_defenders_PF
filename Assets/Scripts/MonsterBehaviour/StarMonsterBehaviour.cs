@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBehaviour : MonoBehaviour {
+public class StarMonsterBehaviour : MonoBehaviour {
 
     public int damageForce;
     public float range;
@@ -10,14 +10,15 @@ public class MonsterBehaviour : MonoBehaviour {
     public float slowIndex = 1f;
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
+
     public GameObject attackShape;
 
     public List<GameObject> enemiesInRange;
 
+    public int myMonsterFamily;
+
     // Use this for initialization
-    void Start () {
-		
-	}
+    void Start () {}
 
     // Update is called once per frame
     void Update()
@@ -37,6 +38,7 @@ public class MonsterBehaviour : MonoBehaviour {
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime);
                 }
+
             }
 
         }
@@ -52,20 +54,10 @@ public class MonsterBehaviour : MonoBehaviour {
     {
         if (collision.tag == "Enemy")
         {
-
-            //Debug.Log(collision.GetInstanceID());
-            //Attack(collision.gameObject);
-
             if (!enemiesInRange.Contains(collision.gameObject))
             {
                 enemiesInRange.Add(collision.gameObject);
-                Debug.Log(enemiesInRange.Count);
             }
-
-            //foreach (GameObject enemy in items)
-            //{
-            //    Attack(enemy);
-            //}
         }
     }
 

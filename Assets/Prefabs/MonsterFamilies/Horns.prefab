@@ -345,7 +345,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1440729303707398}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -20.707119, y: 3.3236299, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4334229163103252}
@@ -408,7 +408,7 @@ Transform:
   m_GameObject: {fileID: 1012814195002806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02899456, y: -0.03363681, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4334229163103252}
   m_RootOrder: 7
@@ -421,7 +421,7 @@ Transform:
   m_GameObject: {fileID: 1701609797544678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.02899456, y: -0.03363681, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 4568007621574944}
   m_RootOrder: 5
@@ -773,14 +773,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5345ab06556e3345ab40d9cf9d430c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageForce: 25
+  damageForce: 20
   range: 2
-  attackRate: 2
+  attackRate: 3
   slowIndex: 1
   slowTime: 1
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1012814195002806}
   enemiesInRange: []
+  myMonsterFamily: 0
 --- !u!114 &114504517552516498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -832,14 +833,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5345ab06556e3345ab40d9cf9d430c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageForce: 25
+  damageForce: 30
   range: 0
   attackRate: 2
   slowIndex: 1
   slowTime: 1
   actualTimeBetweenAttacks: 0
-  attackShape: {fileID: 0}
+  attackShape: {fileID: 1701609797544678}
   enemiesInRange: []
+  myMonsterFamily: 0
 --- !u!210 &210217390033139668
 SortingGroup:
   m_ObjectHideFlags: 1
