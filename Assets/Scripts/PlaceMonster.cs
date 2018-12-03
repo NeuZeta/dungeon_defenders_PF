@@ -55,8 +55,8 @@ public class PlaceMonster : MonoBehaviour {
                     else
                     {
                         //Debug.Log("ya hay un monstruo");
-                        int activeMonsterType = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().monsterIndex;
-                        int currentMonsterLevel = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().GetMonsterLevel();
+                        int activeMonsterType = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().familyIndex;
+                        int currentMonsterLevel = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().currentLevel;
 
                         //Debug.Log("active Monster Type = " + activeMonsterType);
                         //Debug.Log("Current Monster Level = " + currentMonsterLevel);
@@ -102,9 +102,8 @@ public class PlaceMonster : MonoBehaviour {
 
                             monsterFamilyIndex = 0;
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-
-                            //loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
-                            //loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(System.Array.IndexOf(menu00Buttons, "Horns"), newMonsterPosition);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
+                            
                         }
                     }
                     else if (hit.transform.name == "Snake")
@@ -116,7 +115,7 @@ public class PlaceMonster : MonoBehaviour {
 
                             monsterFamilyIndex = 1;
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
+                            
                             //loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
                             //loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(System.Array.IndexOf(menu00Buttons, "Snake"), newMonsterPosition);
                         }
@@ -132,8 +131,15 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     if (hit.transform.name == "Upgrade")
                     {
-                        loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().UpgradeLevel();
-                    } 
+                        loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().UpgradeLevel();
+                    }
+
+                    foreach (GameObject menu in monsterSelector)
+                    {
+                        menu.SetActive(false);
+                    }
+                    loseta = null;
+
                 }
                 else if (hit.transform.tag == "Menu02") { }
             }

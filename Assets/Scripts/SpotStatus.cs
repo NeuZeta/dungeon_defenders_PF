@@ -26,5 +26,4 @@ public class SpotStatus : MonoBehaviour {
         return monster == null;
     }
 
-
 }

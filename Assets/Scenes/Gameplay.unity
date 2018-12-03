@@ -7154,7 +7154,7 @@ MonoBehaviour:
   - {fileID: 21300022, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
   - {fileID: 21300024, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
   monsterData:
-  - {fileID: 0}
+  - {fileID: 1440729303707398, guid: 6e9e88a7ee1f8d542826a1e968f3118c, type: 2}
   - {fileID: 1214858898628486, guid: 0d27e484bd5e5444aa5bafa971703ff1, type: 2}
   loseta: {fileID: 0}
   monsterFamilyIndex: 0

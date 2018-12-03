@@ -10,6 +10,7 @@ TagManager:
   - Menu00
   - Menu01
   - Menu02
+  - Horns
   layers:
   - Default
   - TransparentFX
