@@ -5,8 +5,8 @@ using UnityEngine;
 public class MonsterLevel : MonoBehaviour {
 
     public List<Level> levels;
-    public int monsterLevel;
-
+    public int currentLevel;
+    private Vector3 monsterPosition;
 
     [System.Serializable]
     public class Level
@@ -17,14 +17,27 @@ public class MonsterLevel : MonoBehaviour {
 
     private void OnEnable()
     {
-        monsterLevel = 0;   
+        currentLevel = 0;
     }
 
     public void ActivateMonster(Vector3 pos)
     {
-        Debug.Log("Activamos monstruo");
-        Instantiate(levels[monsterLevel].visualization, pos, Quaternion.identity);
-        
+        monsterPosition = pos;
+        Instantiate(levels[currentLevel].visualization, monsterPosition, Quaternion.identity);  
+        levels[currentLevel].visualization.SetActive(true);
+    }
+
+    public void UpgradeMonster()
+    {
+        Debug.Log("Upgrade Monster");
+        levels[currentLevel].visualization.SetActive(false);
+
+        if (currentLevel < levels.Count)
+        {
+            currentLevel++;
+        }
+        levels[currentLevel].visualization.SetActive(true);
+        Instantiate(levels[currentLevel].visualization, monsterPosition, Quaternion.identity);
     }
 
 }

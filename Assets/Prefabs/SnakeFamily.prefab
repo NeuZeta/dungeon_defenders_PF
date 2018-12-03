@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4118154954448400}
-  - component: {fileID: 114867753043366684}
+  - component: {fileID: 114648102277730912}
   m_Layer: 0
   m_Name: SnakeFamily
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114867753043366684
+--- !u!114 &114648102277730912
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,14 +48,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1214858898628486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29fe11637d612264db80888113b2328d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b71bd3f254d3c2408de106b3a4c41e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levels:
-  - cost: 0
-    visualization: {fileID: 1349824774595516, guid: 529357910022c3145b7636c9d95d6c77,
-      type: 2}
-  - cost: 0
-    visualization: {fileID: 1181032819538254, guid: 8c05fde147e647e499aaec0ec93569ef,
-      type: 2}
-  monsterLevel: 0
+  MonsterPrefabs:
+  - {fileID: 1349824774595516, guid: 529357910022c3145b7636c9d95d6c77, type: 2}
+  - {fileID: 1181032819538254, guid: 8c05fde147e647e499aaec0ec93569ef, type: 2}
+  currentLevel: 0

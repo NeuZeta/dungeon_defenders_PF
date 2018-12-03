@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212645461073224996}
   - component: {fileID: 58118023978882216}
   m_Layer: 0
-  m_Name: horns_01
-  m_TagString: Horns
+  m_Name: Horns
+  m_TagString: Menu00
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4800519506516518}
   - component: {fileID: 212316357472309490}
+  - component: {fileID: 210124816019505024}
   m_Layer: 0
   m_Name: Monster_selector
   m_TagString: Untagged
@@ -55,8 +56,8 @@ GameObject:
   - component: {fileID: 212093292419276930}
   - component: {fileID: 58370413733051058}
   m_Layer: 0
-  m_Name: Serp_01
-  m_TagString: Snake
+  m_Name: Snake
+  m_TagString: Menu00
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,9 +94,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1198670102451462}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.81652, y: -3.1094606, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1426.7893, y: -223.88113, z: -6479.9995}
+  m_LocalScale: {x: 72, y: 72, z: 72}
   m_Children:
   - {fileID: 4108535364028564}
   - {fileID: 4172188144347868}
@@ -132,6 +133,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.09}
   serializedVersion: 2
   m_Radius: 0.43
+--- !u!210 &210124816019505024
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198670102451462}
+  m_Enabled: 1
+  m_SortingLayerID: 755342997
+  m_SortingLayer: 3
+  m_SortingOrder: 0
 --- !u!212 &212093292419276930
 SpriteRenderer:
   m_ObjectHideFlags: 1

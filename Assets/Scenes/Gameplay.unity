@@ -7153,9 +7153,11 @@ MonoBehaviour:
   monsters:
   - {fileID: 21300022, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
   - {fileID: 21300024, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
+  monsterData:
+  - {fileID: 0}
+  - {fileID: 1214858898628486, guid: 0d27e484bd5e5444aa5bafa971703ff1, type: 2}
   loseta: {fileID: 0}
-  monsterHolder: {fileID: 1341654744190126, guid: 3cd0e7fc8a5919145b73608ffbbe718d,
-    type: 2}
+  monsterFamilyIndex: 0
 --- !u!4 &750790507
 Transform:
   m_ObjectHideFlags: 0
@@ -7507,18 +7509,6 @@ Prefab:
     - target: {fileID: 4232454665718042, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
@@ -18682,42 +18672,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1755441085235624, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023303021680198, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755441085235624, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_TagString
-      value: Menu00
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023303021680198, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_TagString
-      value: Menu00
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755441085235624, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_Name
-      value: Snake
-      objectReference: {fileID: 0}
-    - target: {fileID: 1023303021680198, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_Name
-      value: Horns
-      objectReference: {fileID: 0}
-    - target: {fileID: 4800519506516518, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4800519506516518, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4800519506516518, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 72
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
   m_IsPrefabAsset: 0
@@ -21079,26 +21033,6 @@ Prefab:
     - target: {fileID: 4232454665718042, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
       propertyPath: m_RootOrder
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1262536259065636, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
-      propertyPath: m_Name
-      value: Upgrade
-      objectReference: {fileID: 0}
-    - target: {fileID: 1167418634338514, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
-      propertyPath: m_Name
-      value: Sleep
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 4232454665718042, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}

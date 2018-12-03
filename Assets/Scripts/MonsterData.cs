@@ -17,15 +17,21 @@ public class MonsterData : MonoBehaviour {
 
     public void CreateFamily (int index, Vector3 pos)
     {
+        //Debug.Log(index);
         monsterIndex = index;
 
-        types[monsterIndex].monsterType.GetComponent<MonsterLevel>().ActivateMonster(pos);
+        //types[monsterIndex].monsterType.GetComponent<FamilyLevels>().ActivateMonster(pos);
 
     }
 
     public int GetMonsterLevel()
     {
-        return types[monsterIndex].monsterType.GetComponent<MonsterLevel>().monsterLevel;
+        return types[monsterIndex].monsterType.GetComponent<FamilyLevels>().currentLevel;
+    }
+
+    public void UpgradeLevel()
+    {
+        types[monsterIndex].monsterType.GetComponent<FamilyLevels>().SetCorrectMonster();
     }
 
 }

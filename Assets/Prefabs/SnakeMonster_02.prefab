@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4579558352719160}
   - component: {fileID: 212343278880562730}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: right_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4907953806081830}
   - component: {fileID: 212612614031651992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4210107704279560}
   - component: {fileID: 212583210149168518}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anthena right_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 210035986719463918}
   - component: {fileID: 114640596563863040}
   - component: {fileID: 114414493156359300}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SnakeMonster_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4880791195085282}
   - component: {fileID: 212988109946976078}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anthena right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4427863616729006}
   - component: {fileID: 212565688411783838}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: left_03 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4747668081466222}
   - component: {fileID: 212919208201610122}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4896330459864164}
   - component: {fileID: 212666892531681360}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anthena left_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4016869548091534}
   - component: {fileID: 212893048225828848}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: right_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4009740577700394}
   - component: {fileID: 212564719238606530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: right_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4273353241298042}
   - component: {fileID: 212202699130178836}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: left_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4952267942962326}
   - component: {fileID: 212877007929212884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: left_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4518142481534126}
   - component: {fileID: 212969341697018002}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: right_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4326595737603414}
   - component: {fileID: 212273774280155210}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4149716407324466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4787200712228012}
   - component: {fileID: 212137988841799790}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4404597216572722}
   - component: {fileID: 212453191751094282}
   - component: {fileID: 95210230879627506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Attack_shape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4904833903568896}
   - component: {fileID: 212680393571097522}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Anthena left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4549476184874566}
   - component: {fileID: 212605394354668224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: left_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -696,6 +696,8 @@ MonoBehaviour:
   damageForce: 10
   range: 10
   attackRate: 1
+  slowIndex: 1
+  slowTime: 1
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1954613655868570}
   enemiesInRange: []
