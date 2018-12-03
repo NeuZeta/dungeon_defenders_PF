@@ -7153,9 +7153,13 @@ MonoBehaviour:
   monsters:
   - {fileID: 21300022, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
   - {fileID: 21300024, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
+  - {fileID: 21300028, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
+  - {fileID: 21300030, guid: 01ff658efbf1b5f4a9c5bffe78a2cf8a, type: 3}
   monsterData:
   - {fileID: 1440729303707398, guid: 6e9e88a7ee1f8d542826a1e968f3118c, type: 2}
-  - {fileID: 1214858898628486, guid: 0d27e484bd5e5444aa5bafa971703ff1, type: 2}
+  - {fileID: 1111149750394630, guid: f5732638e294e5d41b13d08d81d4da85, type: 2}
+  - {fileID: 1659462218556284, guid: 732d144afb005734ea42b5b472c27ab8, type: 2}
+  - {fileID: 1268943654165376, guid: eb9eeea66ae67ae4a9cb1378c349ddaa, type: 2}
   loseta: {fileID: 0}
   monsterFamilyIndex: 0
 --- !u!4 &750790507
@@ -7508,7 +7512,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4232454665718042, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90f4ed09616abc646845c8cf7dcf0007, type: 2}
@@ -14347,9 +14351,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 90}
   m_LocalScale: {x: 0.013888889, y: 0.013888889, z: 0.013888889}
   m_Children:
+  - {fileID: 934998355}
   - {fileID: 2038371302}
   - {fileID: 1453905488}
-  - {fileID: 934998355}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18670,7 +18674,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4800519506516518, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198670102451462, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
+      propertyPath: m_Name
+      value: Monster_selector_level_00
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a430e51c372301044ac02e94386c1fd6, type: 2}
@@ -21032,7 +21040,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4232454665718042, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62fc4dcb03053b548b82be7d01dad5ba, type: 2}

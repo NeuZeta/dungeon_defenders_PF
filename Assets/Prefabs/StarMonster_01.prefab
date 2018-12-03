@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114556599348064578}
   - component: {fileID: 114499403685864284}
   m_Layer: 0
-  m_Name: StarMonster
+  m_Name: StarMonster_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,6 +306,8 @@ MonoBehaviour:
   damageForce: 0
   range: 0
   attackRate: 0
+  slowIndex: 1
+  slowTime: 1
   actualTimeBetweenAttacks: 0
   attackShape: {fileID: 1779529049296440}
   enemiesInRange: []

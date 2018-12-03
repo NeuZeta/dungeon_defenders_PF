@@ -54,39 +54,26 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else
                     {
-                        //Debug.Log("ya hay un monstruo");
                         int activeMonsterType = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().familyIndex;
                         int currentMonsterLevel = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().currentLevel;
 
                         //Debug.Log("active Monster Type = " + activeMonsterType);
                         //Debug.Log("Current Monster Level = " + currentMonsterLevel);
 
-                        if (activeMonsterType == 0 && currentMonsterLevel == 0)
+                        if (currentMonsterLevel == 0)
                         {
-                            //Debug.Log("Deberia mostrar un menu");
                             monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
                             monsterSelector[currentMonsterLevel + 1].SetActive(true);
-                            monsterToUpgrade.sprite = monsters[currentMonsterLevel];
+                            monsterToUpgrade.sprite = monsters[activeMonsterType];
+                        }
+                        else if (currentMonsterLevel == 1)
+                        {
+                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
+                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
+                            monsterToUpgrade.enabled = false;
+                        }
 
-                        }
-                        if (activeMonsterType == 0 && currentMonsterLevel == 1)
-                        {
-                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
-                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
-                            monsterToUpgrade.enabled = false;
-                        }
-                        if (activeMonsterType == 1 && currentMonsterLevel == 0)
-                        {
-                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
-                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
-                            monsterToUpgrade.sprite = monsters[currentMonsterLevel];
-                        }
-                        if (activeMonsterType == 1 && currentMonsterLevel == 1)
-                        {
-                            monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
-                            monsterSelector[currentMonsterLevel + 1].SetActive(true);
-                            monsterToUpgrade.enabled = false;
-                        }
+
 
 
                     }
@@ -115,9 +102,31 @@ public class PlaceMonster : MonoBehaviour {
 
                             monsterFamilyIndex = 1;
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                            
-                            //loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterHolder, newMonsterPosition, Quaternion.identity);
-                            //loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<MonsterData>().CreateFamily(System.Array.IndexOf(menu00Buttons, "Snake"), newMonsterPosition);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
+                        }
+                    }
+                    else if (hit.transform.name == "Star")
+                    {
+                        if (GameManager.instance.soulTears >= 250)
+                        {
+                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.UpdateTearsState();
+
+                            monsterFamilyIndex = 2;
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
+                        }
+                    }
+                    else if (hit.transform.name == "Mass")
+                    {
+                        if (GameManager.instance.soulTears >= 250)
+                        {
+                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.UpdateTearsState();
+
+                            monsterFamilyIndex = 3;
+                            loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
                     }
 

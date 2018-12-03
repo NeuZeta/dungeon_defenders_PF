@@ -21,7 +21,15 @@ public class FamilyLevels : MonoBehaviour {
         {
             familyIndex = 1;
         }
-	}
+        else if (gameObject.tag == "Star")
+        {
+            familyIndex = 2;
+        }
+        else if (gameObject.tag == "Mass")
+        {
+            familyIndex = 3;
+        }
+    }
 
     public void SetCorrectMonster()
     {

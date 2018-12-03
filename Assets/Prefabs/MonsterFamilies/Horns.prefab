@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4044616328157476}
   - component: {fileID: 114504517552516498}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Horns
   m_TagString: Horns
   m_Icon: {fileID: 0}
