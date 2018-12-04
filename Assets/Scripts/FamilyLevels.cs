@@ -5,6 +5,7 @@ using UnityEngine;
 public class FamilyLevels : MonoBehaviour {
 
     public GameObject[] MonsterPrefabs;
+    public int[] monsterPrice;
     public int currentLevel;
     public int familyIndex;
 
@@ -13,27 +14,27 @@ public class FamilyLevels : MonoBehaviour {
 	void Start () {
         currentLevel = 0;
 
-        if (gameObject.tag == "Horns")
-        {
-            familyIndex = 0;
-        }
-        else if (gameObject.tag == "Snake")
-        {
-            familyIndex = 1;
-        }
-        else if (gameObject.tag == "Star")
-        {
-            familyIndex = 2;
-        }
-        else if (gameObject.tag == "Mass")
-        {
-            familyIndex = 3;
-        }
+        //if (gameObject.tag == "Horns")
+        //{
+        //    familyIndex = 0;
+        //}
+        //else if (gameObject.tag == "Snake")
+        //{
+        //    familyIndex = 1;
+        //}
+        //else if (gameObject.tag == "Star")
+        //{
+        //    familyIndex = 2;
+        //}
+        //else if (gameObject.tag == "Mass")
+        //{
+        //    familyIndex = 3;
+        //}
     }
 
     public void SetCorrectMonster()
     {
-        Debug.Log("Se está comprobando el nivel?");
+        //Debug.Log("Se está comprobando el nivel?");
 
         foreach (GameObject monster in MonsterPrefabs)
         {

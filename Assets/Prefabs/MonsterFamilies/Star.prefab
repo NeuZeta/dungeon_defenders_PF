@@ -734,6 +734,7 @@ MonoBehaviour:
   MonsterPrefabs:
   - {fileID: 1953657388554002}
   - {fileID: 1117403362277896}
+  monsterPrice: 960000002c010000
   currentLevel: 0
   familyIndex: 2
 --- !u!114 &114810821027864492

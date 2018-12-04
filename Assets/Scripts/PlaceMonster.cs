@@ -82,12 +82,14 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     if (hit.transform.name == "Horns")
                     {
-                        if (GameManager.instance.soulTears >= 250)
+                        monsterFamilyIndex = 0;
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                        if (GameManager.instance.soulTears >= monsterPrice)
                         {
-                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            monsterFamilyIndex = 0;
+                            
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                             
@@ -95,36 +97,42 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else if (hit.transform.name == "Snake")
                     {
-                        if (GameManager.instance.soulTears >= 250)
+                        monsterFamilyIndex = 1;
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                        if (GameManager.instance.soulTears >= monsterPrice)
                         {
-                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            monsterFamilyIndex = 1;
+                            
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
                     }
                     else if (hit.transform.name == "Star")
                     {
-                        if (GameManager.instance.soulTears >= 250)
+                        monsterFamilyIndex = 2;
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                        if (GameManager.instance.soulTears >= monsterPrice)
                         {
-                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            monsterFamilyIndex = 2;
+                            
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
                     }
                     else if (hit.transform.name == "Mass")
                     {
-                        if (GameManager.instance.soulTears >= 250)
+                        monsterFamilyIndex = 3;
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                        if (GameManager.instance.soulTears >= monsterPrice)
                         {
-                            GameManager.instance.soulTears -= 250;
+                            GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            monsterFamilyIndex = 3;
+                            
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
@@ -140,7 +148,14 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     if (hit.transform.name == "Upgrade")
                     {
-                        loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().UpgradeLevel();
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[1];
+                        if (GameManager.instance.soulTears >= monsterPrice)
+                        {
+                            GameManager.instance.soulTears -= monsterPrice;
+                            GameManager.instance.UpdateTearsState();
+                            loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().UpgradeLevel();
+                        }
+                           
                     }
 
                     foreach (GameObject menu in monsterSelector)
@@ -158,10 +173,7 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     menu.SetActive(false);
                 }
-                //if (monsterSelector.activeInHierarchy)
-                //{
-                //    monsterSelector.SetActive(false);
-                //}
+
             }
         }
     }

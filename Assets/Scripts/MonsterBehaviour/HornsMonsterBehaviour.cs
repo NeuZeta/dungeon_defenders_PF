@@ -38,12 +38,8 @@ public class HornsMonsterBehaviour : MonoBehaviour {
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime);
                 }
-
-
             }
-
         }
-
     }
 
     void HideAttackShape()
