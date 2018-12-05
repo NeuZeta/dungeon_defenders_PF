@@ -1326,6 +1326,7 @@ MonoBehaviour:
   - {fileID: 1717055088929658}
   - {fileID: 1239389504260272}
   monsterPrice: 64000000c8000000
+  monsterTearsRecovery: 3200000064000000
   currentLevel: 0
   familyIndex: 1
 --- !u!114 &114347533959784492

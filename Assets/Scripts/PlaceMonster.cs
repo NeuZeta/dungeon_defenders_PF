@@ -8,8 +8,10 @@ public class PlaceMonster : MonoBehaviour {
     
     public GameObject[] monsterSelector;
     public SpriteRenderer monsterToUpgrade;
-    public Sprite[] monsters;
+    public Sprite[] monster;
     public GameObject[] monsterData;
+    public Text[] monsterToUpgradePrice;
+    public Text[] monsterToSellPrice;
 
     [HideInInspector]
     public Transform loseta;
@@ -17,7 +19,6 @@ public class PlaceMonster : MonoBehaviour {
     public int monsterFamilyIndex;
 
     private Vector3 newMonsterPosition;
-    private string[] menu00Buttons = new string[] { "Horns", "Snake" };
 
     void Update()
     {
@@ -54,18 +55,17 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else
                     {
-                        int activeMonsterType = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().familyIndex;
+                        monsterFamilyIndex = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().familyIndex;
                         int currentMonsterLevel = loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().currentLevel;
-
-                        //Debug.Log("active Monster Type = " + activeMonsterType);
-                        //Debug.Log("Current Monster Level = " + currentMonsterLevel);
 
                         if (currentMonsterLevel == 0)
                         {
                             monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
                             monsterSelector[currentMonsterLevel + 1].SetActive(true);
-                            monsterToUpgrade.sprite = monsters[activeMonsterType];
+                            monsterToUpgrade.sprite = monster[monsterFamilyIndex];
                             monsterToUpgrade.enabled = true;
+
+
                         }
                         else if (currentMonsterLevel == 1)
                         {
@@ -151,7 +151,8 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     if (hit.transform.name == "Upgrade")
                     {
-                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[1];
+                        int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+
                         if (GameManager.instance.soulTears >= monsterPrice)
                         {
                             GameManager.instance.soulTears -= monsterPrice;
