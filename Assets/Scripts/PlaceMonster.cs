@@ -65,6 +65,7 @@ public class PlaceMonster : MonoBehaviour {
                             monsterSelector[currentMonsterLevel + 1].transform.position = newMonsterPosition;
                             monsterSelector[currentMonsterLevel + 1].SetActive(true);
                             monsterToUpgrade.sprite = monsters[activeMonsterType];
+                            monsterToUpgrade.enabled = true;
                         }
                         else if (currentMonsterLevel == 1)
                         {
@@ -72,10 +73,6 @@ public class PlaceMonster : MonoBehaviour {
                             monsterSelector[currentMonsterLevel + 1].SetActive(true);
                             monsterToUpgrade.enabled = false;
                         }
-
-
-
-
                     }
                 }
                 else if (hit.transform.tag == "Menu00")
@@ -137,6 +134,12 @@ public class PlaceMonster : MonoBehaviour {
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
                     }
+                    else if (hit.transform.name == "Sleep")
+                    {
+                        int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[0];
+                        GameManager.instance.soulTears += monsterTearsRecovery;
+                        GameManager.instance.UpdateTearsState();
+                    }
 
                     foreach (GameObject menu in monsterSelector)
                     {
@@ -157,6 +160,13 @@ public class PlaceMonster : MonoBehaviour {
                         }
                            
                     }
+                    else if (hit.transform.name == "Sleep")
+                    {
+                        int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[0];
+                        GameManager.instance.soulTears += monsterTearsRecovery;
+                        GameManager.instance.UpdateTearsState();
+                        Destroy(loseta.transform.GetComponent<SpotStatus>().monster.gameObject);
+                    }
 
                     foreach (GameObject menu in monsterSelector)
                     {
@@ -165,7 +175,20 @@ public class PlaceMonster : MonoBehaviour {
                     loseta = null;
 
                 }
-                else if (hit.transform.tag == "Menu02") { }
+                else if (hit.transform.tag == "Menu02")
+                {
+                    int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[1];
+                    
+                    GameManager.instance.soulTears += monsterTearsRecovery;
+                    GameManager.instance.UpdateTearsState();
+                    Destroy(loseta.transform.GetComponent<SpotStatus>().monster.gameObject);
+
+                    foreach (GameObject menu in monsterSelector)
+                    {
+                        menu.SetActive(false);
+                    }
+                    loseta = null;
+                }
             }
             else
             {
