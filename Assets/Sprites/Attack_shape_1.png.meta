@@ -8,6 +8,10 @@ TextureImporter:
     21300006: Attack_shape_body_snake_2
     21300008: Attack_shape_Star
     21300010: Attack_shape_Mass
+    21300012: stunned_star
+    21300014: runAwayIcon
+    21300016: runAway
+    21300018: coin
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -175,8 +179,8 @@ TextureImporter:
       name: Attack_shape_body_snake_2
       rect:
         serializedVersion: 2
-        x: 558
-        y: 527
+        x: 553
+        y: 600
         width: 213
         height: 244
       alignment: 0
@@ -200,7 +204,7 @@ TextureImporter:
         width: 510
         height: 305
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,13 +224,53 @@ TextureImporter:
         width: 510
         height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 7bd4bb81b282f4d41bb4f7e995a9736a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stunned_star
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 498
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511fe05bb3d701749a9b4130c82b4e40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: runAway
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 406
+        width: 155
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db5cf793da2cda488ecca8986b1eed2
       vertices: []
       indices: 
       edges: []

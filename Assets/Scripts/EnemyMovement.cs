@@ -9,21 +9,45 @@ public class EnemyMovement : MonoBehaviour {
 
     public float speed = 1f;
     public SpriteRenderer spriteRenderer;
+    public EnemySoul enemySoul;
+    public GameObject coin;
 
     public int currentWaypoint = 0;
+    private Vector3 startPosition;
+    private Vector3 endPosition;
     private bool lookingRight;
 
     // Use this for initialization
     void Start ()
     {
+        coin.SetActive(false);
         transform.position = waypoints[currentWaypoint].transform.position;
     }
 
 
     void Update()
     {
-        Vector3 startPosition = waypoints[currentWaypoint].transform.position;
-        Vector3 endPosition = waypoints[currentWaypoint + 1].transform.position;
+        if (!enemySoul.runAway)
+        {
+            startPosition = waypoints[currentWaypoint].transform.position;
+            endPosition = waypoints[currentWaypoint + 1].transform.position;
+        }
+        else
+        {
+            if (currentWaypoint > 1)
+            {
+                endPosition = waypoints[currentWaypoint].transform.position;
+                if (transform.position == startPosition)
+                {
+                    endPosition = waypoints[currentWaypoint + 1].transform.position;
+                    enemySoul.runAway = false;
+                }
+            }
+            else
+            {
+                endPosition = waypoints[0].transform.position;
+            }
+        }
 
         if (startPosition.x < endPosition.x)
         {
@@ -76,6 +100,15 @@ public class EnemyMovement : MonoBehaviour {
     }
 
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Treasure")
+        {
+            coin.SetActive(true);
+            GameManager.instance.gold -= 100;
+            GameManager.instance.UpdateGoldState();
+        }
+    }
 
 
 }

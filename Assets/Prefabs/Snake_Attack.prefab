@@ -89,11 +89,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e1a03cf719b834a8ab3e3e948b53bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  speed: 5
   startPosition: {x: 0, y: 0, z: 0}
-  targetPosition: {x: 0, y: 0, z: 0}
-  slowIndex: 1.2
-  slowTime: 2
+  target: {fileID: 0}
+  runAwaySuccess: 10
+  slowIndex: 1
+  slowTime: 1
   damageForce: 30
 --- !u!212 &212502175481370800
 SpriteRenderer:

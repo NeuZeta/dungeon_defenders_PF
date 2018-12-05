@@ -5,7 +5,7 @@ using UnityEngine;
 public class HornsMonsterBehaviour : MonoBehaviour {
 
     public int damageForce;
-    public float range;
+    public int runAwaySuccess = 0;
     public float attackRate;
     public float slowIndex = 1f;
     public float slowTime = 1f;
@@ -36,7 +36,7 @@ public class HornsMonsterBehaviour : MonoBehaviour {
 
                 foreach (GameObject enemy in enemiesInRange)
                 {
-                    enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime);
+                    enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
                 }
             }
         }

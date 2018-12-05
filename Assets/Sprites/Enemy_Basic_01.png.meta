@@ -16,6 +16,7 @@ TextureImporter:
     21300022: Enemy_Basic_Scared_04
     21300024: Enemy_Basic_Scared_05
     21300026: Enemy_Basic_Scared_06
+    21300028: coin
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -395,6 +396,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 14e0246063346594a99972754a1ea9a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 15
+        width: 78
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621c8d19d9d7ce548a8c71bf0fa22b45
       vertices: []
       indices: 
       edges: []

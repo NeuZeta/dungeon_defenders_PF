@@ -25,7 +25,6 @@ public class EnemySpawner : MonoBehaviour {
         lastSpawnTime = Time.deltaTime;
 	}
 	
-	
 	void Update () {
         // 1
         int currentWave = GameManager.instance.Wave;
@@ -64,4 +63,12 @@ public class EnemySpawner : MonoBehaviour {
         }
 
     }
+
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Destroy(col.gameObject);
+    }
+
+
 }

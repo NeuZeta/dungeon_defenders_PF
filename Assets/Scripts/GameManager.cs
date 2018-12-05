@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour {
     public int soulTears = 500;
     [HideInInspector]
     public int gold = 1000;
-
+    public Slider goldBar;
     public Text waveNumber;
     public bool gameOver = false;
     private int wave;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
     void Awake () {
         MakeSingleton();
         UpdateTearsState();
-        //UpdateGoldState();
+        UpdateGoldState();
     }
 
     private void Start()
@@ -65,9 +65,15 @@ public class GameManager : MonoBehaviour {
         tearsText.text = soulTears.ToString();
     }
 
-    //public void UpdateGoldState()
-    //{
-    //    goldText.text = gold.ToString();
-    //}
+    public void UpdateGoldState()
+    {
+        goldText.text = gold.ToString();
+        goldBar.value = gold;
+        if (gold <= 0)
+        {
+            gold = 0;
+            gameOver = true;
+        }
+    }
 
 }//GameManager

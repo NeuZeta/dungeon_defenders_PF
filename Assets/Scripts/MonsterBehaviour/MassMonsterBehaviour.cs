@@ -5,7 +5,7 @@ using UnityEngine;
 public class MassMonsterBehaviour : MonoBehaviour {
 
     public int damageForce;
-    public float range;
+    public int runAwaySuccess;
     public float attackRate;
     public float slowIndex = 1f;
     public float slowTime = 1f;
@@ -37,13 +37,18 @@ public class MassMonsterBehaviour : MonoBehaviour {
 
                 foreach (GameObject enemy in enemiesInRange)
                 {
-                    enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime);
+                    Attack(enemy);
                 }
 
             }
 
         }
 
+    }
+
+    private void Attack(GameObject enemy)
+    {
+        enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
     }
 
     void HideAttackShape()

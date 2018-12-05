@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageForce: 20
-  range: 0
+  runAwaySuccess: 10
   attackRate: 2
   slowIndex: 5
   slowTime: 1.5
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageForce: 40
-  range: 0
+  runAwaySuccess: 10
   attackRate: 2
   slowIndex: 3
   slowTime: 2

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SnakeMonsterBehaviour : MonoBehaviour {
 
-
-    public float range;
     public float attackRate;
     public float actualTimeBetweenAttacks = 0f;
     public GameObject[] attackShape;
@@ -36,7 +34,7 @@ public class SnakeMonsterBehaviour : MonoBehaviour {
                     shape.SetActive(true);
                 }
                 
-                Shoot(enemiesInRange[0]);
+                Shoot(enemiesInRange[0].transform);
 
                 Invoke("HideAttackShape", 0.4f);
             } 
@@ -66,10 +64,17 @@ public class SnakeMonsterBehaviour : MonoBehaviour {
         }
     }
 
-    void Shoot(GameObject target)
+    void Shoot(Transform target)
     {
         GameObject myBullet = Instantiate(SnakeBullet, this.transform.position + new Vector3(0,1,0), Quaternion.identity);
-        myBullet.GetComponent<SnakeAttackBehaviour>().targetPosition = target.transform.position;
+
+        SnakeAttackBehaviour bullet = myBullet.GetComponent<SnakeAttackBehaviour>();
+
+        if (bullet != null)
+        {
+            bullet.Seek(target);
+        }
+
     }
 
     void HideAttackShape()

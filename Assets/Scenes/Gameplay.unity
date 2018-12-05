@@ -2888,6 +2888,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &318552528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318552531}
+  - component: {fileID: 318552530}
+  - component: {fileID: 318552529}
+  m_Layer: 0
+  m_Name: Gold Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &318552529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318552528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d7b69bbe64a528d42830952e531ff306, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 1000
+--- !u!222 &318552530
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318552528}
+  m_CullTransparentMesh: 0
+--- !u!224 &318552531
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318552528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1736192837}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -0.015}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &320808815
 GameObject:
   m_ObjectHideFlags: 0
@@ -7533,7 +7608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectDistance: {x: 1, y: -0.5}
   m_UseGraphicAlpha: 1
 --- !u!114 &737648663
 MonoBehaviour:
@@ -9332,9 +9407,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tearsText: {fileID: 1850093218}
-  goldText: {fileID: 0}
+  goldText: {fileID: 318552529}
   soulTears: 500
   gold: 1000
+  goldBar: {fileID: 901898185}
   waveNumber: {fileID: 458104877}
   gameOver: 0
 --- !u!4 &892421544
@@ -9376,7 +9452,7 @@ RectTransform:
   m_GameObject: {fileID: 901898183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.008, y: 0.007, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.015, z: 1}
   m_Children:
   - {fileID: 737648661}
   - {fileID: 1058124006}
@@ -9429,9 +9505,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 200
+  m_MaxValue: 1000
   m_WholeNumbers: 1
-  m_Value: 200
+  m_Value: 1000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -17329,13 +17405,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 901898184}
+  - {fileID: 318552531}
   m_Father: {fileID: 2120458611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.68}
-  m_SizeDelta: {x: 1.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.855}
+  m_SizeDelta: {x: 2, y: 0.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736192838
 MonoBehaviour:
@@ -21104,7 +21181,7 @@ GameObject:
   - component: {fileID: 2120458612}
   m_Layer: 0
   m_Name: Treasure_sprite
-  m_TagString: Untagged
+  m_TagString: Treasure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21267,6 +21344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2133715957}
+  - component: {fileID: 2133715958}
   - component: {fileID: 2133715956}
   m_Layer: 0
   m_Name: EnemySpawner
@@ -21329,12 +21407,37 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133715955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.62, y: -0.2, z: 0}
+  m_LocalPosition: {x: 9.84, y: -1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2133715958
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2133715955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6.63}
+  m_EdgeRadius: 0
 --- !u!1 &2143146341
 GameObject:
   m_ObjectHideFlags: 0
