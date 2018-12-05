@@ -25,12 +25,13 @@ public class EnemySoul : MonoBehaviour {
 	void Update () {
         //Debug.Log(actualSoul);
         if (actualSoul == 0) Destroy(gameObject);
+        AnimationControl();
 
-	}
+
+    }
 
     public void TakeDamage(int damageForce, float slowIndex, float slowTime)
     {
-        anim.SetTrigger("Scared");
         actualSoul -= damageForce;
   
         if (!scared)
@@ -62,6 +63,19 @@ public class EnemySoul : MonoBehaviour {
         enemyMovement.speed *= slowIndex;
         scared = false;
     }
+
+    void AnimationControl()
+    {
+        if (scared == true)
+        {
+            anim.SetLayerWeight(1, 0);
+        }
+        else
+        {
+            anim.SetLayerWeight(1, 1);
+        }
+    }
+
 
 }//EnemySoul
 

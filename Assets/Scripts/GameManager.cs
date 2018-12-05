@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
     void Awake () {
         MakeSingleton();
         UpdateTearsState();
-        UpdateGoldState();
+        //UpdateGoldState();
     }
 
     private void Start()
@@ -65,9 +65,9 @@ public class GameManager : MonoBehaviour {
         tearsText.text = soulTears.ToString();
     }
 
-    public void UpdateGoldState()
-    {
-        goldText.text = gold.ToString();
-    }
+    //public void UpdateGoldState()
+    //{
+    //    goldText.text = gold.ToString();
+    //}
 
 }//GameManager

@@ -22,8 +22,9 @@ public class SnakeAttackBehaviour : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         moveDirection = (targetPosition - transform.position + new Vector3 (0,1,0)).normalized * speed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 0.2f);
     }
+
 
     private void OnTriggerEnter2D(Collider2D col)
     {

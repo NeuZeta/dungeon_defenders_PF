@@ -14,7 +14,10 @@ public class EnemyMovement : MonoBehaviour {
     private bool lookingRight;
 
     // Use this for initialization
-    void Start () {}
+    void Start ()
+    {
+        transform.position = waypoints[currentWaypoint].transform.position;
+    }
 
 
     void Update()
