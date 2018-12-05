@@ -711,12 +711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d378f4fea63c4478b8746ac1c3b385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageForce: 20
+  damageForce: 5
   runAwaySuccess: 10
   attackRate: 2
   slowIndex: 5
   slowTime: 1.5
   actualTimeBetweenAttacks: 0
+  starExplosion: {fileID: 198405478074982118, guid: 02cc43d6387f8a54795ada76a46ba2e5,
+    type: 2}
   attackShape: {fileID: 1008910900117062}
   enemiesInRange: []
   myMonsterFamily: 2
@@ -767,6 +769,7 @@ MonoBehaviour:
   slowIndex: 3
   slowTime: 2
   actualTimeBetweenAttacks: 0
+  starExplosion: {fileID: 0}
   attackShape: {fileID: 1227001357069670}
   enemiesInRange: []
   myMonsterFamily: 0

@@ -13,6 +13,8 @@ public class PlaceMonster : MonoBehaviour {
     public Text[] monsterToUpgradePrice;
     public Text[] monsterToSellPrice;
 
+    public ParticleSystem hornsInstanciate;
+
     [HideInInspector]
     public Transform loseta;
 
@@ -89,7 +91,7 @@ public class PlaceMonster : MonoBehaviour {
                             
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-                            
+                            Instantiate(hornsInstanciate, newMonsterPosition, Quaternion.identity);
                         }
                     }
                     else if (hit.transform.name == "Snake")
@@ -158,6 +160,10 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().UpgradeLevel();
+                            if (monsterFamilyIndex == 0)
+                            {
+                                Instantiate(hornsInstanciate, loseta.transform.position, Quaternion.identity);
+                            }
                         }
                            
                     }

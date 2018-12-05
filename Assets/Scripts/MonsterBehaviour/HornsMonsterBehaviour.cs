@@ -10,6 +10,7 @@ public class HornsMonsterBehaviour : MonoBehaviour {
     public float slowIndex = 1f;
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
+    public ParticleSystem hornsExplosion;
 
     public GameObject attackShape;
 
@@ -37,6 +38,7 @@ public class HornsMonsterBehaviour : MonoBehaviour {
                 foreach (GameObject enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+                    Instantiate(hornsExplosion, enemy.transform.position, Quaternion.identity);
                 }
             }
         }

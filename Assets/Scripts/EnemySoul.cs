@@ -13,6 +13,7 @@ public class EnemySoul : MonoBehaviour {
     public EnemyMovement enemyMovement;
     public GameObject stunnedStars;
     public GameObject runAwayShadow;
+    public ParticleSystem deathExplosion;
 
     private bool scared = false;
     private bool stunned = false;
@@ -32,7 +33,12 @@ public class EnemySoul : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Debug.Log(actualSoul);
-        if (actualSoul == 0) Destroy(gameObject);
+        if (actualSoul == 0)
+        {
+            Destroy(gameObject);
+            Explode(transform.position);
+        }
+
         AnimationControl();
         if (runAway == false)
         {
@@ -42,6 +48,11 @@ public class EnemySoul : MonoBehaviour {
         {
             runAwayShadow.SetActive(true);
         }
+    }
+
+    public void Explode(Vector3 position)
+    {
+        Instantiate(deathExplosion, position, Quaternion.identity);
     }
 
     public void TakeDamage(int damageForce, float slowIndex, float slowTime, int runAwaySuccess)

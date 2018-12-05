@@ -92,6 +92,7 @@ MonoBehaviour:
   speed: 5
   startPosition: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
+  virusExplosion: {fileID: 19800006, guid: aaba06840d2c7b34f9518db787f4aa32, type: 2}
   runAwaySuccess: 10
   slowIndex: 1
   slowTime: 1

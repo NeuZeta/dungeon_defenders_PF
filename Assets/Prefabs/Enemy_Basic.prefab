@@ -349,7 +349,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1904700802149452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.723126, y: -0.49037233, z: 0}
+  m_LocalPosition: {x: -11.259592, y: -0.9539758, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4973793299631926}
@@ -514,6 +514,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 114611262774548340}
   stunnedStars: {fileID: 1265681947361340}
   runAwayShadow: {fileID: 1452436803775164}
+  deathExplosion: {fileID: 19800004, guid: bbc9426d9e623394fa80a6e421ad13d9, type: 2}
   runAway: 0
 --- !u!114 &114372925500365852
 MonoBehaviour:

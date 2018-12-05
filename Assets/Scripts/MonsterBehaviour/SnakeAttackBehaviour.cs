@@ -10,6 +10,8 @@ public class SnakeAttackBehaviour : MonoBehaviour {
     public Transform target;
     Vector2 moveDirection;
 
+    public ParticleSystem virusExplosion;
+
     public int runAwaySuccess = 10;
     public float slowIndex = 1f;
     public float slowTime = 1f;
@@ -52,7 +54,9 @@ public class SnakeAttackBehaviour : MonoBehaviour {
         if (col.gameObject.tag == "Enemy")
         {
             col.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+            Instantiate(virusExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
+           
         }
     }
 

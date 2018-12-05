@@ -10,6 +10,7 @@ public class StarMonsterBehaviour : MonoBehaviour {
     public float slowIndex = 1f;
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
+    public ParticleSystem starExplosion;
 
     public GameObject attackShape;
 
@@ -37,6 +38,7 @@ public class StarMonsterBehaviour : MonoBehaviour {
                 foreach (GameObject enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+                    Instantiate(starExplosion, enemy.transform.position, Quaternion.identity);
                 }
 
             }

@@ -779,6 +779,7 @@ MonoBehaviour:
   slowIndex: 1
   slowTime: 1
   actualTimeBetweenAttacks: 0
+  hornsExplosion: {fileID: 19800018, guid: 1b689fa32f87f854cadda85559ce30bd, type: 2}
   attackShape: {fileID: 1012814195002806}
   enemiesInRange: []
   myMonsterFamily: 0
@@ -841,6 +842,7 @@ MonoBehaviour:
   slowIndex: 1
   slowTime: 1
   actualTimeBetweenAttacks: 0
+  hornsExplosion: {fileID: 19800018, guid: 1b689fa32f87f854cadda85559ce30bd, type: 2}
   attackShape: {fileID: 1701609797544678}
   enemiesInRange: []
   myMonsterFamily: 0

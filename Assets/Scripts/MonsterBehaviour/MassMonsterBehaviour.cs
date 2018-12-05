@@ -10,6 +10,7 @@ public class MassMonsterBehaviour : MonoBehaviour {
     public float slowIndex = 1f;
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
+    public ParticleSystem massExplosion;
 
     public GameObject attackShape;
 
@@ -49,6 +50,7 @@ public class MassMonsterBehaviour : MonoBehaviour {
     private void Attack(GameObject enemy)
     {
         enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+        Instantiate(massExplosion, enemy.transform.position, Quaternion.identity);
     }
 
     void HideAttackShape()

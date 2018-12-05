@@ -7690,6 +7690,7 @@ MonoBehaviour:
   - {fileID: 1268943654165376, guid: eb9eeea66ae67ae4a9cb1378c349ddaa, type: 2}
   monsterToUpgradePrice: []
   monsterToSellPrice: []
+  hornsInstanciate: {fileID: 19800000, guid: 4313774f610dbf64a91172fe39d708ab, type: 2}
   loseta: {fileID: 0}
   monsterFamilyIndex: 0
 --- !u!4 &750790507

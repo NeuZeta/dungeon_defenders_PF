@@ -680,6 +680,7 @@ MonoBehaviour:
   slowIndex: -1
   slowTime: 2
   actualTimeBetweenAttacks: 0
+  massExplosion: {fileID: 0}
   attackShape: {fileID: 1277846632743846}
   enemiesInRange: []
   myMonsterFamily: 3
@@ -700,6 +701,8 @@ MonoBehaviour:
   slowIndex: -1
   slowTime: 2
   actualTimeBetweenAttacks: 0
+  massExplosion: {fileID: 198247871303120836, guid: a83e3034bc4f2174c9280ecc524bb84f,
+    type: 2}
   attackShape: {fileID: 1529431131618674}
   enemiesInRange: []
   myMonsterFamily: 3
