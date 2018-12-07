@@ -30,7 +30,7 @@ public class MenuController001 : MonoBehaviour
 
         sellText.text = "+" + familyLevels[monsterFamilyIndex].monsterTearsRecovery[0];
 
-        if (GameManager.instance.soulTears < price)
+        if (GameplayManager.Instance.soulTears < price)
         {
             Color temp = monsterToUpgrade.color;
             temp.a = 0.3f;

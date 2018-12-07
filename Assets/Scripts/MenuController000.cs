@@ -25,7 +25,7 @@ public class MenuController000 : MonoBehaviour {
         {
             int price = familyLevels[i].monsterPrice[0];
 
-            if (GameManager.instance.soulTears < price)
+            if (GameplayManager.Instance.soulTears < price)
             {
                 Color temp = monsterFamilyButton[i].color;
                 temp.a = 0.3f;

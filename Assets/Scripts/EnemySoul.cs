@@ -38,8 +38,8 @@ public class EnemySoul : MonoBehaviour {
         //Debug.Log(actualSoul);
         if (actualSoul == 0)
         {
-            GameManager.instance.soulTears += rewardForKill[enemyLevel];
-            GameManager.instance.UpdateTearsState();
+            GameplayManager.Instance.soulTears += rewardForKill[enemyLevel];
+            GameplayManager.Instance.UpdateTearsState();
 
             Destroy(gameObject);
             Explode(transform.position);
