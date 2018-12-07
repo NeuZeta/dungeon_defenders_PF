@@ -11,6 +11,8 @@ public class HornsMonsterBehaviour : MonoBehaviour {
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
     public ParticleSystem hornsExplosion;
+    public AudioSource audioSource;
+    public AudioClip hornsAttack;
 
     public GameObject attackShape;
 
@@ -34,10 +36,11 @@ public class HornsMonsterBehaviour : MonoBehaviour {
             {
                 attackShape.SetActive(true);
                 Invoke("HideAttackShape", 0.7f);
-
+                audioSource.PlayOneShot(hornsAttack);
                 foreach (GameObject enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+                    
                     Instantiate(hornsExplosion, enemy.transform.position, Quaternion.identity);
                 }
             }

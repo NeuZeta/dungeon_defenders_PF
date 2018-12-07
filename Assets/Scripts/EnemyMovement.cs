@@ -34,22 +34,10 @@ public class EnemyMovement : MonoBehaviour {
         }
         else
         {
-            if (currentWaypoint > 1)
-            {
-                endPosition = waypoints[currentWaypoint].transform.position;
-                if (transform.position == startPosition)
-                {
-                    endPosition = waypoints[currentWaypoint + 1].transform.position;
-                    enemySoul.runAway = false;
-                }
-            }
-            else
-            {
-                endPosition = waypoints[0].transform.position;
-            }
+            endPosition = waypoints[currentWaypoint].transform.position;
         }
 
-        if (startPosition.x < endPosition.x)
+        if (startPosition.x <= endPosition.x)
         {
             if (!lookingRight)
             {
@@ -75,7 +63,15 @@ public class EnemyMovement : MonoBehaviour {
         {
             if (currentWaypoint < waypoints.Length - 2)
             {
-                currentWaypoint++;
+                if (enemySoul.runAway)
+                {
+                    enemySoul.runAway = false;
+                    endPosition = waypoints[currentWaypoint + 1].transform.position;
+                }
+                else
+                {
+                    currentWaypoint++;
+                }
             }
         }
 

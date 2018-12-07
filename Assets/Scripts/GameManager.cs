@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,13 +29,16 @@ public class GameManager : MonoBehaviour {
             waveNumber.text = "WAVE " + (wave + 1);
         }
     }
-
+    public GameObject pauseMenu;
+    public AudioSource audioSource;
+    public Text audioButtonText;
 
     // Use this for initialization
     void Awake () {
-        MakeSingleton();
+        //MakeSingleton();
         UpdateTearsState();
         UpdateGoldState();
+        instance = this;
     }
 
     private void Start()
@@ -75,5 +79,50 @@ public class GameManager : MonoBehaviour {
             gameOver = true;
         }
     }
+
+    public void PauseButton()
+    {
+        Time.timeScale=0f;
+        pauseMenu.SetActive(true);
+
+    }
+
+    public void RestartGameButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
+    public void BackToMenuButton()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("");
+    }
+
+    public void MusicOnOffButton()
+    {
+        if (audioSource.mute)
+        {
+            audioButtonText.text = "MUSIC OFF";
+            audioSource.mute = false;
+        }
+        else
+        {
+            audioButtonText.text = "MUSIC ON";
+            audioSource.mute = true;
+        }
+    }
+
+    public void ResumeGameButton()
+    {
+        pauseMenu.SetActive(false);
+        Time.timeScale=1f;
+    }
+
+    
+
+
+
+
 
 }//GameManager

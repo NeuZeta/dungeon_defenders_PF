@@ -7,6 +7,8 @@ public class SnakeMonsterBehaviour : MonoBehaviour {
     public float attackRate;
     public float actualTimeBetweenAttacks = 0f;
     public GameObject[] attackShape;
+    public AudioSource audioSource;
+    public AudioClip snakeAttack;
 
     [SerializeField]
     GameObject SnakeBullet;
@@ -35,6 +37,7 @@ public class SnakeMonsterBehaviour : MonoBehaviour {
                 }
                 
                 Shoot(enemiesInRange[0].transform);
+                audioSource.PlayOneShot(snakeAttack);
 
                 Invoke("HideAttackShape", 0.4f);
             } 

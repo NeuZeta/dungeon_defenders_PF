@@ -14,6 +14,9 @@ public class EnemySoul : MonoBehaviour {
     public GameObject stunnedStars;
     public GameObject runAwayShadow;
     public ParticleSystem deathExplosion;
+    public int enemyLevel;
+    public int[] rewardForKill; 
+
 
     private bool scared = false;
     private bool stunned = false;
@@ -35,6 +38,9 @@ public class EnemySoul : MonoBehaviour {
         //Debug.Log(actualSoul);
         if (actualSoul == 0)
         {
+            GameManager.instance.soulTears += rewardForKill[enemyLevel];
+            GameManager.instance.UpdateTearsState();
+
             Destroy(gameObject);
             Explode(transform.position);
         }
@@ -86,9 +92,6 @@ public class EnemySoul : MonoBehaviour {
             scared = true;
             Invoke("StopBeingScared", 0.5f);
         }
-
-        GameManager.instance.soulTears += damageForce;
-        GameManager.instance.UpdateTearsState();
 
         if (actualSoul < 0)
         {

@@ -12,8 +12,10 @@ public class PlaceMonster : MonoBehaviour {
     public GameObject[] monsterData;
     public Text[] monsterToUpgradePrice;
     public Text[] monsterToSellPrice;
+    public AudioSource audioSource;
+    public AudioClip[] monsterSound;
 
-    public ParticleSystem hornsInstanciate;
+    public ParticleSystem[] monsterInstantiate;
 
     [HideInInspector]
     public Transform loseta;
@@ -88,10 +90,11 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            
+                            Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
+                            audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-                            Instantiate(hornsInstanciate, newMonsterPosition, Quaternion.identity);
+                           
                         }
                     }
                     else if (hit.transform.name == "Snake")
@@ -103,7 +106,8 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            
+                            Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45,0,0));
+                            audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
@@ -117,7 +121,8 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            
+                            Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
+                            audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
@@ -131,7 +136,8 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
 
-                            
+                            Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
+                            audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
                             loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
                         }
@@ -139,8 +145,11 @@ public class PlaceMonster : MonoBehaviour {
                     else if (hit.transform.name == "Sleep")
                     {
                         int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[0];
+                        audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
+                        Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
                         GameManager.instance.soulTears += monsterTearsRecovery;
                         GameManager.instance.UpdateTearsState();
+
                     }
 
                     foreach (GameObject menu in monsterSelector)
@@ -160,10 +169,8 @@ public class PlaceMonster : MonoBehaviour {
                             GameManager.instance.soulTears -= monsterPrice;
                             GameManager.instance.UpdateTearsState();
                             loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().UpgradeLevel();
-                            if (monsterFamilyIndex == 0)
-                            {
-                                Instantiate(hornsInstanciate, loseta.transform.position, Quaternion.identity);
-                            }
+                            audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
+                            Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
                         }
                            
                     }
@@ -172,6 +179,8 @@ public class PlaceMonster : MonoBehaviour {
                         int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[0];
                         GameManager.instance.soulTears += monsterTearsRecovery;
                         GameManager.instance.UpdateTearsState();
+                        audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
+                        Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
                         Destroy(loseta.transform.GetComponent<SpotStatus>().monster.gameObject);
                     }
 
@@ -189,6 +198,8 @@ public class PlaceMonster : MonoBehaviour {
                     GameManager.instance.soulTears += monsterTearsRecovery;
                     GameManager.instance.UpdateTearsState();
                     Destroy(loseta.transform.GetComponent<SpotStatus>().monster.gameObject);
+                    audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
+                    Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
 
                     foreach (GameObject menu in monsterSelector)
                     {

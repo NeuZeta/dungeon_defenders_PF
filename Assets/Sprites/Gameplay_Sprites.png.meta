@@ -12,6 +12,10 @@ TextureImporter:
     21300014: Ground_02
     21300016: Ground_01
     21300018: Snake_Attack
+    21300020: Confusion Icon
+    21300022: Arrows Icon
+    21300024: Stun Icon
+    21300026: Area attack
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -311,6 +315,86 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a4d0f01b51edf4e4ca16e9a3b1c19fbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Confusion Icon
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1697
+        width: 297
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535333ff63a08fe428c170cf2860bf7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrows Icon
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 1692
+        width: 299
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ed0717c4b026a49bce66d6a0d5ce5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stun Icon
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1700
+        width: 299
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1476d3fbe3ae30d4caa970ea79be3ba3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Area attack
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 1405
+        width: 289
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f59be1ef2df7c34dba811758701a9cd
       vertices: []
       indices: 
       edges: []

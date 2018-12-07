@@ -11,6 +11,8 @@ public class StarMonsterBehaviour : MonoBehaviour {
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
     public ParticleSystem starExplosion;
+    public AudioSource audioSource;
+    public AudioClip starAttack;
 
     public GameObject attackShape;
 
@@ -35,6 +37,7 @@ public class StarMonsterBehaviour : MonoBehaviour {
                 attackShape.SetActive(true);
                 Invoke("HideAttackShape", 0.7f);
 
+                audioSource.PlayOneShot(starAttack);
                 foreach (GameObject enemy in enemiesInRange)
                 {
                     enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);

@@ -54,7 +54,7 @@ public class SnakeAttackBehaviour : MonoBehaviour {
         if (col.gameObject.tag == "Enemy")
         {
             col.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
-            Instantiate(virusExplosion, transform.position, Quaternion.identity);
+            Instantiate(virusExplosion, transform.position, Quaternion.identity, col.transform);
             Destroy(gameObject);
            
         }

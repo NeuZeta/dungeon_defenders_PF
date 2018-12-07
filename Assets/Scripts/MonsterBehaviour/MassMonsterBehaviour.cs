@@ -11,6 +11,8 @@ public class MassMonsterBehaviour : MonoBehaviour {
     public float slowTime = 1f;
     public float actualTimeBetweenAttacks = 0f;
     public ParticleSystem massExplosion;
+    public AudioSource audioSource;
+    public AudioClip massAttack;
 
     public GameObject attackShape;
 
@@ -36,11 +38,11 @@ public class MassMonsterBehaviour : MonoBehaviour {
                 attackShape.SetActive(true);
                 Invoke("HideAttackShape", 0.7f);
 
+                audioSource.PlayOneShot(massAttack);
                 foreach (GameObject enemy in enemiesInRange)
                 {
                     Attack(enemy);
                 }
-
             }
 
         }
@@ -50,6 +52,7 @@ public class MassMonsterBehaviour : MonoBehaviour {
     private void Attack(GameObject enemy)
     {
         enemy.GetComponent<EnemySoul>().TakeDamage(damageForce, slowIndex, slowTime, runAwaySuccess);
+        
         Instantiate(massExplosion, enemy.transform.position, Quaternion.identity);
     }
 
