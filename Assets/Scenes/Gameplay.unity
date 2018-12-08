@@ -23691,13 +23691,13 @@ MonoBehaviour:
     maxEnemies: 7
   - enemyPrefab: {fileID: 1904700802149452, guid: 035c776f8139d71448a935fd881aa535,
       type: 2}
-    spawnInterval: 1.5
+    spawnInterval: 2
     maxEnemies: 13
   - enemyPrefab: {fileID: 1904700802149452, guid: 035c776f8139d71448a935fd881aa535,
       type: 2}
     spawnInterval: 2
     maxEnemies: 15
-  timeBetweenWaves: 20
+  timeBetweenWaves: 30
 --- !u!4 &2133715957
 Transform:
   m_ObjectHideFlags: 0

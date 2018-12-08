@@ -12,7 +12,8 @@ public class MainMenuController : MonoBehaviour {
     public void StartGameButton()
     {
         audioSource.PlayOneShot(GameManager.Instance.clickButton);
-        SceneManager.LoadScene("Gameplay");
+        //SceneManager.LoadScene("Gameplay");
+        ScreenFader.instance.LoadLevel("Gameplay");
     }
 
     public void MusicOnOffButton()

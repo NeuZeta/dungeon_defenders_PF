@@ -110,14 +110,14 @@ public class GameplayManager : MonoBehaviour {
     public void RestartGameButton()
     {
         audioSource.PlayOneShot(GameManager.Instance.clickButton);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ScreenFader.instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
 
     public void BackToMenuButton()
     {
         audioSource.PlayOneShot(GameManager.Instance.clickButton);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
+        ScreenFader.instance.LoadLevel("MainMenu");
     }
 
     public void MusicOnOffButton()
