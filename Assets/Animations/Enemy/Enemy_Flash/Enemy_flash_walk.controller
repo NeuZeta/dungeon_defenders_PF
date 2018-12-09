@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Enemy_Basic_walk
+  m_Name: Enemy_flash_walk
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Scared
@@ -70,7 +70,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9291acb630d6b5c498d49e0260c949b4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4007d19a0a0aff44ea86bc93033c432c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -82,7 +82,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Enemy_Basic_walk
+  m_Name: Enemy_walk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -95,7 +95,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a996249aa4c612f499e78a44e7ff2475, type: 2}
+  m_Motion: {fileID: 7400000, guid: 547e6d462172ba84db739078d9cd9f88, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -120,7 +120,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 66d905868d2d3fa49afcada5816853f2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 17b17bd37fc095e42ba14ea9ab1d7422, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

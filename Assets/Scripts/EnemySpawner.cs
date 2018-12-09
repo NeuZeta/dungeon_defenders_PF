@@ -38,26 +38,25 @@ public class EnemySpawner : MonoBehaviour {
                 enemiesSpawned < waves[currentWave].maxEnemies)
             {
                 lastSpawnTime = Time.time;
-                GameObject newEnemy = (GameObject)
-                    Instantiate(waves[currentWave].enemyPrefab);
+                GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
                 newEnemy.GetComponent<EnemyMovement>().waypoints = waypoints;
                 enemiesSpawned++;
             }
-            if (enemiesSpawned == waves[currentWave].maxEnemies &&
-                GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (enemiesSpawned == waves[currentWave].maxEnemies && GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 GameplayManager.Instance.Wave++;
                 enemiesSpawned = 0;
                 lastSpawnTime = Time.time;
             }
         }
-        else
+        else if (currentWave >= waves.Length)
         {
             GameplayManager.Instance.Invoke("GameOver", 0.4f);
         }
 
     }
 
+     
 
     private void OnTriggerEnter2D(Collider2D col)
     {

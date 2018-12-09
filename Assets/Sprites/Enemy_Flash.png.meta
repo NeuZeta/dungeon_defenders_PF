@@ -1,17 +1,21 @@
 fileFormatVersion: 2
-guid: d84cf54abe4f67644ba29133a3592899
+guid: e72b0401bafa23a40af6e0b8926cf3b7
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Enemy_Basic_0
-    21300002: Enemy_Basic_1
-    21300004: Enemy_Basic_2
-    21300006: Enemy_Basic_3
-    21300008: Enemy_Basic_4
-    21300010: Enemy_Basic_5
-    21300012: Enemy_Basic_6
-    21300014: Enemy_Basic_7
-    21300016: HealthBar_BG
-    21300018: HealthBar_Fill
+    21300000: Enemy_Flash_0
+    21300002: Enemy_Flash_1
+    21300004: Enemy_Flash_2
+    21300006: Enemy_Flash_3
+    21300008: Enemy_Flash_scared_07
+    21300010: Enemy_Flash_4
+    21300012: Enemy_Flash_5
+    21300014: Enemy_Flash_6
+    21300016: Enemy_Flash_scared_01
+    21300018: Enemy_Flash_scared_02
+    21300020: Enemy_Flash_scared_03
+    21300022: Enemy_Flash_scared_04
+    21300024: Enemy_Flash_scared_05
+    21300026: Enemy_Flash_scared_06
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -116,201 +120,281 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy_Basic_0
+      name: Enemy_Flash_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 745
-        width: 156
-        height: 271
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 0
+        y: 728
+        width: 175
+        height: 296
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 704eed52400128e418725163279c70cb
+      spriteID: f2ee3ce6b7a63824cbf711203eda79b6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_1
+      name: Enemy_Flash_1
       rect:
         serializedVersion: 2
-        x: 254
-        y: 746
-        width: 160
-        height: 270
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 176
+        y: 730
+        width: 195
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dafa9707b4c69aa4ea29fd4bfa410a30
+      spriteID: 2969dae84a60cb94c9e85a8168ca5203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_2
+      name: Enemy_Flash_2
       rect:
         serializedVersion: 2
-        x: 455
-        y: 744
-        width: 193
-        height: 272
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 372
+        y: 728
+        width: 213
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d462b29930643446a8a39c3980c4cb8
+      spriteID: 9f79aa4bed93aa7478b8ad09ffb35a17
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_3
+      name: Enemy_Flash_3
       rect:
         serializedVersion: 2
-        x: 686
-        y: 744
-        width: 217
-        height: 272
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 587
+        y: 730
+        width: 233
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 211d0eb8941178b4da54a53993a9b5a4
+      spriteID: a6ac4410aebee5940907b2af06867680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_4
+      name: Enemy_Flash_scared_07
       rect:
         serializedVersion: 2
-        x: 23
-        y: 424
-        width: 221
-        height: 272
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 836
+        y: 731
+        width: 175
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90f43ec2fd2c934eb1530e780cbc2ee
+      spriteID: f6afe7a03cba74e4aa6477a40ec3e767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_5
+      name: Enemy_Flash_4
       rect:
         serializedVersion: 2
-        x: 277
-        y: 423
-        width: 192
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 418
+        width: 237
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e83dc43a42f828499ad220520a7801a
+      spriteID: 8dfe0287d22ea5948b48a910442fcb7b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_6
+      name: Enemy_Flash_5
       rect:
         serializedVersion: 2
-        x: 526
-        y: 423
-        width: 158
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 241
+        y: 419
+        width: 205
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3d7c5a6c4fe9ab4ca3dd8a224f6d5bf
+      spriteID: 71f3e3577d3b0974d8d26b78e0444005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy_Basic_7
+      name: Enemy_Flash_6
       rect:
         serializedVersion: 2
-        x: 732
-        y: 423
-        width: 171
-        height: 273
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 451
+        y: 422
+        width: 173
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80c9f9e9f21ee3a40bd5a92d59328bee
+      spriteID: 617145c8686451146b3d67dbfb32ecdb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HealthBar_BG
+      name: Enemy_Flash_scared_01
       rect:
         serializedVersion: 2
-        x: 69
-        y: 291
-        width: 201
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 628
+        y: 418
+        width: 175
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6234b9b78a8e13449de325bc7da8275
+      spriteID: c24e66887f47e534586fd7d300dbc928
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HealthBar_Fill
+      name: Enemy_Flash_scared_02
       rect:
         serializedVersion: 2
-        x: 71
-        y: 226
-        width: 197
-        height: 32
-      alignment: 9
-      pivot: {x: 0, y: 0.50000286}
+        x: 816
+        y: 421
+        width: 195
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc2f2559da074064d9b0a633596f09bd
+      spriteID: 62486154df1ded1459d6bcecc2d32fbc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Flash_scared_03
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 90
+        width: 213
+        height: 294
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b47d28b52154a42849283524366efa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Flash_scared_04
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 73
+        width: 233
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea50645be29673429c799778cf2d40a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Flash_scared_05
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 73
+        width: 237
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9c68cdc5b71554c877abbbcd038b76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Flash_scared_06
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 71
+        width: 205
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a310261453615e42bd730746766ff5f
       vertices: []
       indices: 
       edges: []
@@ -318,7 +402,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d7b4f5a7092b1004689c974d6a612ad4
+    spriteID: 2a8e929df6abb5f4e90afdb84ef5c7a4
     vertices: []
     indices: 
     edges: []
