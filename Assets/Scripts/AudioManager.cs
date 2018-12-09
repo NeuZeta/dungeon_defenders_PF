@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class AudioManager : MonoBehaviour {
 
-    private static GameManager instance;
-    public static GameManager Instance
+    private static AudioManager instance;
+    public static AudioManager Instance
     {
         get
         {

@@ -14,7 +14,7 @@ public class HornsMonsterBehaviour : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip hornsAttack;
 
-    public GameObject attackShape;
+    public GameObject[] attackShape;
 
     public List<GameObject> enemiesInRange;
 
@@ -34,7 +34,10 @@ public class HornsMonsterBehaviour : MonoBehaviour {
            
             if (enemiesInRange.Count > 0)
             {
-                attackShape.SetActive(true);
+                foreach (GameObject shape in attackShape)
+                {
+                    shape.SetActive(true);
+                }
                 Invoke("HideAttackShape", 0.7f);
                 audioSource.PlayOneShot(hornsAttack);
                 foreach (GameObject enemy in enemiesInRange)
@@ -49,7 +52,10 @@ public class HornsMonsterBehaviour : MonoBehaviour {
 
     void HideAttackShape()
     {
-        attackShape.SetActive(false);
+        foreach (GameObject shape in attackShape)
+        {
+            shape.SetActive(false);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

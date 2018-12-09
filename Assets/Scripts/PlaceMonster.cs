@@ -41,7 +41,7 @@ public class PlaceMonster : MonoBehaviour {
                 {
                     if (hit.transform.tag == "MonsterSpot")
                     {
-                        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+                        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
                         newMonsterPosition = hit.transform.position;
                         loseta = hit.transform;
 
@@ -85,7 +85,7 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else if (hit.transform.tag == "Menu00")
                     {
-                        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+                        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
                         if (hit.transform.name == "Horns")
                         {
                             monsterFamilyIndex = 0;
@@ -165,7 +165,7 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else if (hit.transform.tag == "Menu01")
                     {
-                        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+                        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
                         if (hit.transform.name == "Upgrade")
                         {
                             int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
@@ -199,7 +199,7 @@ public class PlaceMonster : MonoBehaviour {
                     }
                     else if (hit.transform.tag == "Menu02")
                     {
-                        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+                        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
                         int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[1];
 
                         GameplayManager.Instance.soulTears += monsterTearsRecovery;

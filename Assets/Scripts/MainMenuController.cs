@@ -11,24 +11,24 @@ public class MainMenuController : MonoBehaviour {
 
     public void StartGameButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
         //SceneManager.LoadScene("Gameplay");
         ScreenFader.instance.LoadLevel("Gameplay");
     }
 
     public void MusicOnOffButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(AudioManager.Instance.clickButton);
         
-        if (GameManager.Instance.audioSource.mute)
+        if (AudioManager.Instance.audioSource.mute)
         {
             audioButtonText.text = "MUSIC OFF";
-            GameManager.Instance.audioSource.mute = false;
+            AudioManager.Instance.audioSource.mute = false;
         }
         else
         {
             audioButtonText.text = "MUSIC ON";
-            GameManager.Instance.audioSource.mute = true;
+            AudioManager.Instance.audioSource.mute = true;
         }
     }
 }

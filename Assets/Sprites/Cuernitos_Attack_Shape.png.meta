@@ -1,17 +1,12 @@
 fileFormatVersion: 2
-guid: 3e9ff26d5dfe52745ba5833ec0eb2e72
+guid: 6414e4de91893054686dbf72598d6a80
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Masa_nivel_2
-    21300002: Masa_dientes_sup_02
-    21300004: Masa_horn
-    21300006: Masa_face_01
-    21300008: Masa_dientes_inf_02
-    21300010: Masa_level_1
-    21300012: Masa_shadow
-    21300014: Masa_campanilla
-    21300016: Attack_shape_02
-    21300018: Attack_shape_01
+    21300000: Cuernitos_Attack_Shape_0
+    21300002: Cuernitos_Attack_Shape_1
+    21300004: Cuernitos_Attack_Shape_2
+    21300006: Cuernitos_Attack_Shape_3
+    21300008: Cuernitos_Attack_Shape_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -55,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,201 +111,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Masa_nivel_2
+      name: Cuernitos_Attack_Shape_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 549
-        width: 316
-        height: 448
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0048aa27bb8b82e4284137beccf9b5bf
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_dientes_sup_02
-      rect:
-        serializedVersion: 2
-        x: 367
-        y: 889
-        width: 176
-        height: 90
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4caa175aa9423b647b508112e43fa3ac
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_horn
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 944
-        width: 12
-        height: 41
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b94c017fa986c64c9e4eba999f22688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_face_01
-      rect:
-        serializedVersion: 2
-        x: 669
-        y: 915
-        width: 122
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c92465ee3765ccc428382bacc4e78ea8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_dientes_inf_02
-      rect:
-        serializedVersion: 2
-        x: 365
-        y: 784
-        width: 185
-        height: 78
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b3beed720ecce048bd506d7521806c5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_level_1
-      rect:
-        serializedVersion: 2
-        x: 801
-        y: 724
-        width: 217
-        height: 203
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cdba830c565de14d978155821f38f6a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_shadow
-      rect:
-        serializedVersion: 2
-        x: 479
-        y: 622
-        width: 287
-        height: 141
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a589766646a8dea428949385b1dd8a38
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Masa_campanilla
-      rect:
-        serializedVersion: 2
-        x: 366
-        y: 647
-        width: 43
-        height: 96
-      alignment: 9
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac445cafc85620f4a9e14c95485cad67
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack_shape_02
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 0
-        width: 467
+        x: 16
+        y: 471
+        width: 460
         height: 553
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.63260823, y: 0.06714353}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50052a8a2171c6745b9ff769a511f1c2
+      spriteID: 2e79fefe4e8462d40a3dd9eb3e730fb7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack_shape_01
+      name: Cuernitos_Attack_Shape_1
       rect:
         serializedVersion: 2
-        x: 666
-        y: 48
-        width: 358
-        height: 312
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 476
+        y: 348
+        width: 504
+        height: 632
+      alignment: 9
+      pivot: {x: 0.6184002, y: 0.07763454}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e00ccc236608764697041228ba75642
+      spriteID: ebb5ecd2b0fc53b4db6abce3b4ecf979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_Attack_Shape_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 0
+        width: 333
+        height: 463
+      alignment: 9
+      pivot: {x: 0.52787566, y: 0.004509666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b124e3789fbac499c6e2726d699ecd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_Attack_Shape_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 85
+        width: 331
+        height: 259
+      alignment: 9
+      pivot: {x: 0.06331466, y: 0.19791976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7d0842167339d4d89345f14705738a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cuernitos_Attack_Shape_4
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 89
+        width: 207
+        height: 155
+      alignment: 9
+      pivot: {x: 0.05797308, y: 0.4401129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e41c2ecf3b681d046a9dd3d12a08c5df
       vertices: []
       indices: 
       edges: []
@@ -318,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 35a24eb3797b1b14eabaca7a63c784fe
+    spriteID: 3f784a7113c615e439546159f3a075f0
     vertices: []
     indices: 
     edges: []

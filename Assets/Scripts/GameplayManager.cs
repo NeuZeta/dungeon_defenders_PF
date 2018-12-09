@@ -45,11 +45,14 @@ public class GameplayManager : MonoBehaviour {
     public GameObject pauseMenu;
     public Text audioButtonText;
     public AudioSource audioSource;
+    public AudioClip winGame, loseGame, clickButton;
     public GameObject gameOverPanel, gameOverText, winText;
 
 
     // Use this for initialization
     void Awake () {
+        gold = 1000;
+        soulTears = 500;
         gameOverPanel.SetActive(false);
         UpdateTearsState();
         UpdateGoldState();
@@ -87,13 +90,13 @@ public class GameplayManager : MonoBehaviour {
         {
             gameOverText.SetActive(false);
             winText.SetActive(true);
-            audioSource.PlayOneShot(GameManager.Instance.winGame);
+            audioSource.PlayOneShot(winGame);
         }
         else
         {
             gameOverText.SetActive(true);
             winText.SetActive(false);
-            audioSource.PlayOneShot(GameManager.Instance.loseGame);
+            audioSource.PlayOneShot(loseGame);
         }
 
     }
@@ -101,7 +104,7 @@ public class GameplayManager : MonoBehaviour {
 
     public void PauseButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(clickButton);
         Time.timeScale = 0f;
         pauseMenu.SetActive(true);
         IsMusicOn();
@@ -109,30 +112,30 @@ public class GameplayManager : MonoBehaviour {
 
     public void RestartGameButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(clickButton);
         ScreenFader.instance.LoadLevel(SceneManager.GetActiveScene().name);
     }
 
     public void BackToMenuButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(clickButton);
         Time.timeScale = 1f;
         ScreenFader.instance.LoadLevel("MainMenu");
     }
 
     public void MusicOnOffButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(clickButton);
 
-        if (GameManager.Instance.audioSource.mute)
+        if (AudioManager.Instance.audioSource.mute)
         {
             audioButtonText.text = "MUSIC OFF";
-            GameManager.Instance.audioSource.mute = false;
+            AudioManager.Instance.audioSource.mute = false;
         }
         else
         {
             audioButtonText.text = "MUSIC ON";
-            GameManager.Instance.audioSource.mute = true;
+            AudioManager.Instance.audioSource.mute = true;
         }
     }
 
@@ -151,7 +154,7 @@ public class GameplayManager : MonoBehaviour {
 
     public void ResumeGameButton()
     {
-        audioSource.PlayOneShot(GameManager.Instance.clickButton);
+        audioSource.PlayOneShot(clickButton);
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
     }

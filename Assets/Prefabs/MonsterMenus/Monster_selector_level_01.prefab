@@ -89,6 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4232454665718042}
+  - component: {fileID: 210401784216535996}
   - component: {fileID: 114316000740458000}
   m_Layer: 0
   m_Name: Monster_selector_level_01
@@ -360,6 +361,16 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!210 &210401784216535996
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1462507535127468}
+  m_Enabled: 1
+  m_SortingLayerID: 755342997
+  m_SortingLayer: 3
+  m_SortingOrder: 2
 --- !u!210 &210606503731548306
 SortingGroup:
   m_ObjectHideFlags: 1

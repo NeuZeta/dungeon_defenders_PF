@@ -13,8 +13,9 @@ public class MassMonsterBehaviour : MonoBehaviour {
     public ParticleSystem massExplosion;
     public AudioSource audioSource;
     public AudioClip massAttack;
+    public Animator anim;
 
-    public GameObject attackShape;
+    public GameObject[] attackShape;
 
     public List<GameObject> enemiesInRange;
 
@@ -35,8 +36,14 @@ public class MassMonsterBehaviour : MonoBehaviour {
             if (enemiesInRange.Count > 0)
             {
 
-                attackShape.SetActive(true);
+                foreach (GameObject shape in attackShape)
+                {
+                    shape.SetActive(true);
+                }
+
+                anim.SetTrigger("Attack");
                 Invoke("HideAttackShape", 0.7f);
+                
 
                 audioSource.PlayOneShot(massAttack);
                 foreach (GameObject enemy in enemiesInRange)
@@ -58,7 +65,10 @@ public class MassMonsterBehaviour : MonoBehaviour {
 
     void HideAttackShape()
     {
-        attackShape.SetActive(false);
+        foreach (GameObject shape in attackShape)
+        {
+            shape.SetActive(false);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
