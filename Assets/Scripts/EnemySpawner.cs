@@ -9,7 +9,7 @@ public class EnemySpawner : MonoBehaviour {
     [System.Serializable]
     public class Wave
     {
-        public GameObject enemyPrefab;
+        public GameObject[] enemyPrefab;
         public float spawnInterval = 2;
         public int maxEnemies = 20;
     }
@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour {
                 enemiesSpawned < waves[currentWave].maxEnemies)
             {
                 lastSpawnTime = Time.time;
-                GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab);
+                GameObject newEnemy = (GameObject) Instantiate(waves[currentWave].enemyPrefab[Random.Range(0, waves[currentWave].enemyPrefab.Length)]);
                 newEnemy.GetComponent<EnemyMovement>().waypoints = waypoints;
                 enemiesSpawned++;
             }
