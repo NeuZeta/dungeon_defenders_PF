@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour {
         }
     }
     public AudioSource audioSource;
-    public AudioClip clickButton, loseGame, winGame;
+    public AudioClip clickButton;
 
     void Awake () {
         MakeSingleton();

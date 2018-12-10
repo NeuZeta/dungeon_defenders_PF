@@ -100,9 +100,13 @@ public class EnemyMovement : MonoBehaviour {
     {
         if (col.gameObject.tag == "Treasure")
         {
-            coin.SetActive(true);
-            GameplayManager.Instance.gold -= 100;
-            GameplayManager.Instance.UpdateGoldState();
+            if (GameplayManager.Instance.gold > 0)
+            {
+                coin.SetActive(true);
+                GameplayManager.Instance.gold -= 100;
+                GameplayManager.Instance.UpdateGoldState();
+            }
+            
         }
     }
 

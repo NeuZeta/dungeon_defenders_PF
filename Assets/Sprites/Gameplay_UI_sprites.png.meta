@@ -20,6 +20,7 @@ TextureImporter:
     21300030: Upgrade_mass
     21300032: mass
     21300034: Loseta_HI
+    21300036: Back_button
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -472,13 +473,33 @@ TextureImporter:
         width: 115
         height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 078b45ffdde8d764a981ef03371bbf99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Back_button
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 730
+        width: 76
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bf4a060fbb568642884fb0644ab9eda
       vertices: []
       indices: 
       edges: []

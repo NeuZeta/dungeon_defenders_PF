@@ -86,75 +86,44 @@ public class PlaceMonster : MonoBehaviour {
                     else if (hit.transform.tag == "Menu00")
                     {
                         audioSource.PlayOneShot(AudioManager.Instance.clickButton);
-                        if (hit.transform.name == "Horns")
-                        {
-                            monsterFamilyIndex = 0;
-                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
-                            if (GameplayManager.Instance.soulTears >= monsterPrice)
-                            {
-                                GameplayManager.Instance.soulTears -= monsterPrice;
-                                GameplayManager.Instance.UpdateTearsState();
-
-                                Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
-                                audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
-                                loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                                loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-
-                            }
-                        }
-                        else if (hit.transform.name == "Snake")
-                        {
-                            monsterFamilyIndex = 1;
-                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
-                            if (GameplayManager.Instance.soulTears >= monsterPrice)
-                            {
-                                GameplayManager.Instance.soulTears -= monsterPrice;
-                                GameplayManager.Instance.UpdateTearsState();
-
-                                Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
-                                audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
-                                loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                                loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-                            }
-                        }
-                        else if (hit.transform.name == "Star")
-                        {
-                            monsterFamilyIndex = 2;
-                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
-                            if (GameplayManager.Instance.soulTears >= monsterPrice)
-                            {
-                                GameplayManager.Instance.soulTears -= monsterPrice;
-                                GameplayManager.Instance.UpdateTearsState();
-
-                                Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
-                                audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
-                                loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                                loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-                            }
-                        }
-                        else if (hit.transform.name == "Mass")
-                        {
-                            monsterFamilyIndex = 3;
-                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
-                            if (GameplayManager.Instance.soulTears >= monsterPrice)
-                            {
-                                GameplayManager.Instance.soulTears -= monsterPrice;
-                                GameplayManager.Instance.UpdateTearsState();
-
-                                Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
-                                audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
-                                loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
-                                loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
-                            }
-                        }
-                        else if (hit.transform.name == "Sleep")
+                        if (hit.transform.name == "Sleep")
                         {
                             int monsterTearsRecovery = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterTearsRecovery[0];
                             audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
                             Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
                             GameplayManager.Instance.soulTears += monsterTearsRecovery;
                             GameplayManager.Instance.UpdateTearsState();
+                        }
+                        else
+                        {
+                            if (hit.transform.name == "Horns")
+                            {
+                                monsterFamilyIndex = 0;
+                            }
+                            else if (hit.transform.name == "Snake")
+                            {
+                                monsterFamilyIndex = 1;
+                            }
+                            else if (hit.transform.name == "Star")
+                            {
+                                monsterFamilyIndex = 2;
+                            }
+                            else if (hit.transform.name == "Mass")
+                            {
+                                monsterFamilyIndex = 3;
+                            }
 
+                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                            if (GameplayManager.Instance.soulTears >= monsterPrice)
+                            {
+                                GameplayManager.Instance.soulTears -= monsterPrice;
+                                GameplayManager.Instance.UpdateTearsState();
+
+                                Instantiate(monsterInstantiate[monsterFamilyIndex], newMonsterPosition, Quaternion.Euler(45, 0, 0));
+                                audioSource.PlayOneShot(monsterSound[monsterFamilyIndex]);
+                                loseta.transform.GetComponent<SpotStatus>().monster = Instantiate(monsterData[monsterFamilyIndex], newMonsterPosition, Quaternion.identity);
+                                loseta.transform.GetComponent<SpotStatus>().monster.GetComponent<FamilyLevels>().SetCorrectMonster();
+                            }
                         }
 
                         foreach (GameObject menu in monsterSelector)
@@ -168,7 +137,7 @@ public class PlaceMonster : MonoBehaviour {
                         audioSource.PlayOneShot(AudioManager.Instance.clickButton);
                         if (hit.transform.name == "Upgrade")
                         {
-                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[0];
+                            int monsterPrice = monsterData[monsterFamilyIndex].GetComponent<FamilyLevels>().monsterPrice[1];
 
                             if (GameplayManager.Instance.soulTears >= monsterPrice)
                             {

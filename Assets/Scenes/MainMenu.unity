@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 116399660}
   - component: {fileID: 116399659}
   m_Layer: 5
-  m_Name: Music Options Button
+  m_Name: Credits Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 802250710}
-        m_MethodName: MusicOnOffButton
+        m_MethodName: GoToCredits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   - component: {fileID: 1511219863}
   - component: {fileID: 1511219862}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: AudioController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1308,7 +1308,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: music off
+  m_Text: 'Credits
+
+'
 --- !u!222 &2094832123
 CanvasRenderer:
   m_ObjectHideFlags: 0
