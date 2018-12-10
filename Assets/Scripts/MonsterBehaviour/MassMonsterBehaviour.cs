@@ -21,10 +21,14 @@ public class MassMonsterBehaviour : MonoBehaviour {
 
     public int myMonsterFamily;
 
-    // Use this for initialization
-    void Start () {}
+    void Awake()
+    {
+        foreach (GameObject shape in attackShape)
+        {
+            shape.SetActive(false);
+        }
+    }
 
-    // Update is called once per frame
     void Update()
     {
         actualTimeBetweenAttacks += Time.deltaTime;

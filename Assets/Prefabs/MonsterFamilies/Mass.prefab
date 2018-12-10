@@ -926,8 +926,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9770d1f853228f047851eb9ba336b36b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageForce: 40
-  runAwaySuccess: 5
+  damageForce: 25
+  runAwaySuccess: 4
   attackRate: 3
   slowIndex: -1
   slowTime: 2

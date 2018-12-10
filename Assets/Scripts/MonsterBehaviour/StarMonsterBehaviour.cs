@@ -14,14 +14,20 @@ public class StarMonsterBehaviour : MonoBehaviour {
     public AudioSource audioSource;
     public AudioClip starAttack;
 
-    public GameObject attackShape;
+    public GameObject[] attackShape;
 
     public List<GameObject> enemiesInRange;
 
     public int myMonsterFamily;
 
     // Use this for initialization
-    void Start () {}
+    void Awake ()
+    {
+        foreach (GameObject shape in attackShape)
+        {
+            shape.SetActive(false);
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -34,7 +40,10 @@ public class StarMonsterBehaviour : MonoBehaviour {
            
             if (enemiesInRange.Count > 0)
             {
-                attackShape.SetActive(true);
+                foreach (GameObject shape in attackShape)
+                {
+                    shape.SetActive(true);
+                }
                 Invoke("HideAttackShape", 0.7f);
 
                 audioSource.PlayOneShot(starAttack);
@@ -52,7 +61,10 @@ public class StarMonsterBehaviour : MonoBehaviour {
 
     void HideAttackShape()
     {
-        attackShape.SetActive(false);
+        foreach (GameObject shape in attackShape)
+        {
+            shape.SetActive(false);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

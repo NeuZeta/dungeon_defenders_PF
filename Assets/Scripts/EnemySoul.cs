@@ -108,7 +108,7 @@ public class EnemySoul : MonoBehaviour {
 
     IEnumerator RestoreEnemySpeed (float slowTime, float slowIndex)
     {
-        yield return new WaitForSeconds(slowTime);
+        yield return new WaitForSeconds(Random.Range(0,slowTime));
         enemyMovement.speed *= slowIndex;
         stunnedStars.SetActive(false);
         stunned = false;
