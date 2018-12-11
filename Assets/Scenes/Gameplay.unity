@@ -25446,17 +25446,17 @@ MonoBehaviour:
     - {fileID: 1904700802149452, guid: 035c776f8139d71448a935fd881aa535, type: 2}
     - {fileID: 1704594913843062, guid: c392f7057787c43498ca39b496e1176e, type: 2}
     spawnInterval: 2
-    maxEnemies: 13
+    maxEnemies: 12
   - enemyPrefab:
     - {fileID: 1452464663369460, guid: df8237fbe15824643a05dca38d3b6896, type: 2}
     spawnInterval: 1
-    maxEnemies: 15
+    maxEnemies: 20
   - enemyPrefab:
     - {fileID: 1904700802149452, guid: 035c776f8139d71448a935fd881aa535, type: 2}
     - {fileID: 1704594913843062, guid: c392f7057787c43498ca39b496e1176e, type: 2}
     - {fileID: 1452464663369460, guid: df8237fbe15824643a05dca38d3b6896, type: 2}
     spawnInterval: 2
-    maxEnemies: 20
+    maxEnemies: 40
   timeBetweenWaves: 100
 --- !u!4 &2133715957
 Transform:
